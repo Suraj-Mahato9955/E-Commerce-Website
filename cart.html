@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NovaShop - Cart</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header id="header">
+
+    <a href="index.html" class="logo">NovaShop</a>
+
+    <nav>
+
+        <ul id="navbar">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="shop.html">Shop</a>
+            </li>
+
+            <li>
+                <a href="index.html#features">Features</a>
+            </li>
+
+            <li>
+                <a href="index.html#newsletter">Contact</a>
+            </li>
+
+            <li>
+                <a class="active" href="cart.html">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <div id="mobile">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+</header>
+
+
+<section class="section-p1 cart-page">
+
+    <div class="section-heading">
+
+        <p>Your Shopping Bag</p>
+
+        <h2>Shopping Cart</h2>
+
+    </div>
+
+
+    <div id="cart-container">
+
+        <!-- JavaScript will insert cart items here -->
+
+    </div>
+
+
+    <div class="cart-summary">
+
+        <h3>Cart Total</h3>
+
+        <div class="summary-row">
+
+            <span>Subtotal</span>
+
+            <strong id="cart-subtotal">
+                ₹0
+            </strong>
+
+        </div>
+
+
+        <div class="summary-row">
+
+            <span>Shipping</span>
+
+            <strong id="cart-shipping">
+                ₹0
+            </strong>
+
+        </div>
+
+
+        <div class="summary-row total-row">
+
+            <span>Total</span>
+
+            <strong id="cart-total">
+                ₹0
+            </strong>
+
+        </div>
+
+
+        <button id="checkout-btn">
+            Proceed to Checkout
+        </button>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-column">
+
+            <a href="index.html" class="footer-logo">
+                NovaShop
+            </a>
+
+            <p>
+                Your one-stop destination for fashion
+                and lifestyle products.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="cart.html">Cart</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Customer Service</h3>
+
+            <a href="#">My Account</a>
+            <a href="#">Return Policy</a>
+            <a href="#">Help & Support</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>India</p>
+            <p>+91 98765 43210</p>
+            <p>support@novashop.com</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        <p>
+            © 2026 NovaShop. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
