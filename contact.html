@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact - ShopEase</title>
+    <title>Checkout - ShopEase</title>
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -19,6 +19,7 @@
 
 <body>
 
+    <!-- Header -->
     <header class="header">
         <div class="container nav">
 
@@ -30,7 +31,7 @@
                 <a href="index.html">Home</a>
                 <a href="shop.html">Shop</a>
                 <a href="index.html#features">Features</a>
-                <a href="contact.html" class="active">Contact</a>
+                <a href="contact.html">Contact</a>
             </nav>
 
             <a href="cart.html" class="cart-link">
@@ -42,84 +43,105 @@
     </header>
 
 
-    <main class="contact-page">
+    <!-- Checkout -->
+    <main class="checkout-page">
 
         <div class="container">
 
             <div class="shop-heading">
-                <h1>Contact Us</h1>
-                <p>Have a question? We'd love to hear from you.</p>
+                <h1>Checkout</h1>
+                <p>Complete your order details.</p>
             </div>
 
-            <div class="contact-container">
+            <div class="checkout-container">
 
-                <div class="contact-info">
+                <!-- Customer Details -->
+                <form id="checkout-form" class="checkout-form">
 
-                    <h2>Get In Touch</h2>
-
-                    <p>
-                        Feel free to contact us for any questions,
-                        feedback or support.
-                    </p>
-
-                    <div class="contact-item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>support@shopease.com</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <p>+91 98765 43210</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <div>
-                            <h3>Location</h3>
-                            <p>India</p>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <form class="contact-form" id="contact-form">
+                    <h2>Billing Details</h2>
 
                     <input
                         type="text"
-                        placeholder="Your Name"
+                        placeholder="Full Name"
                         required
                     >
 
                     <input
                         type="email"
-                        placeholder="Your Email"
+                        placeholder="Email Address"
+                        required
+                    >
+
+                    <input
+                        type="tel"
+                        placeholder="Phone Number"
                         required
                     >
 
                     <input
                         type="text"
-                        placeholder="Subject"
+                        placeholder="Address"
                         required
                     >
 
-                    <textarea
-                        rows="6"
-                        placeholder="Your Message"
-                        required
-                    ></textarea>
+                    <div class="checkout-row">
+
+                        <input
+                            type="text"
+                            placeholder="City"
+                            required
+                        >
+
+                        <input
+                            type="text"
+                            placeholder="PIN Code"
+                            required
+                        >
+
+                    </div>
+
+                    <h2>Payment Method</h2>
+
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="cod" checked>
+                        Cash on Delivery
+                    </label>
+
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="online">
+                        Online Payment
+                    </label>
 
                     <button type="submit">
-                        Send Message
+                        Place Order
                     </button>
 
                 </form>
+
+
+                <!-- Order Summary -->
+                <div class="checkout-summary">
+
+                    <h2>Order Summary</h2>
+
+                    <div id="checkout-items"></div>
+
+                    <div class="summary-line">
+                        <span>Subtotal</span>
+                        <span id="checkout-subtotal">$0.00</span>
+                    </div>
+
+                    <div class="summary-line">
+                        <span>Shipping</span>
+                        <span id="checkout-shipping">$5.00</span>
+                    </div>
+
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span id="checkout-total">$0.00</span>
+                    </div>
+
+                </div>
 
             </div>
 
@@ -128,6 +150,7 @@
     </main>
 
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>© 2026 ShopEase. All Rights Reserved.</p>
