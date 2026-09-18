@@ -227,3 +227,99 @@ if (checkoutButton) {
 updateCartCount();
 
 displayCart();
+// Contact Form
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        alert("Thank you! Your message has been sent.");
+
+        contactForm.reset();
+    });
+}
+// =========================
+// CHECKOUT
+// =========================
+
+const checkoutItems = document.getElementById("checkout-items");
+const checkoutSubtotal = document.getElementById("checkout-subtotal");
+const checkoutTotal = document.getElementById("checkout-total");
+const checkoutForm = document.getElementById("checkout-form");
+
+if (checkoutItems) {
+
+    let subtotal = 0;
+
+    if (cart.length === 0) {
+
+        checkoutItems.innerHTML = `
+            <p class="empty-checkout">
+                Your cart is empty.
+            </p>
+        `;
+
+        checkoutSubtotal.textContent = "$0.00";
+        checkoutTotal.textContent = "$0.00";
+
+    } else {
+
+        checkoutItems.innerHTML = "";
+
+        cart.forEach((item) => {
+
+            subtotal += Number(item.price);
+
+            const itemElement = document.createElement("div");
+
+            itemElement.className = "checkout-item";
+
+            itemElement.innerHTML = `
+                <span class="checkout-item-name">
+                    ${item.name}
+                </span>
+
+                <span class="checkout-item-price">
+                    $${Number(item.price).toFixed(2)}
+                </span>
+            `;
+
+            checkoutItems.appendChild(itemElement);
+
+        });
+
+        const shipping = 5;
+        const total = subtotal + shipping;
+
+        checkoutSubtotal.textContent =
+            `$${subtotal.toFixed(2)}`;
+
+        checkoutTotal.textContent =
+            `$${total.toFixed(2)}`;
+    }
+}
+
+
+// Place Order
+
+if (checkoutForm) {
+
+    checkoutForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        if (cart.length === 0) {
+            alert("Your cart is empty!");
+            return;
+        }
+
+        alert(
+            "Order placed successfully! Thank you for shopping with ShopEase."
+        );
+
+        localStorage.removeItem("cart");
+
+        window.location.href = "index.html";
+    });
+}
