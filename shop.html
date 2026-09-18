@@ -5,355 +5,356 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>NovaShop - Shop</title>
+    <title>Shop - ShopEase</title>
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header id="header">
+    <!-- =========================
+         HEADER
+    ========================== -->
 
-        <a href="index.html" class="logo">NovaShop</a>
+    <header class="header">
 
-        <nav>
-            <ul id="navbar">
+        <div class="container nav">
 
-                <li><a href="index.html">Home</a></li>
+            <a href="index.html" class="logo">
+                Shop<span>Ease</span>
+            </a>
 
-                <li>
-                    <a class="active" href="shop.html">Shop</a>
-                </li>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="index.html#features">Features</a>
+                <a href="contact.html">Contact</a>
+            </nav>
 
-                <li>
-                    <a href="index.html#features">Features</a>
-                </li>
+            <a href="cart.html" class="cart-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </a>
 
-                <li>
-                    <a href="index.html#newsletter">Contact</a>
-                </li>
-
-                <li>
-                    <a href="cart.html" id="cart-link">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        <span id="cart-count">0</span>
-                    </a>
-                </li>
-
-            </ul>
-        </nav>
-
-        <div id="mobile">
-            <i class="fa-solid fa-bars"></i>
         </div>
 
     </header>
 
 
-    <section id="banner" class="shop-banner">
+    <!-- =========================
+         SHOP PAGE
+    ========================== -->
 
-        <div class="shop-controls">
+    <main class="shop-page">
 
-            <input type="text" id="product-search" placeholder="Search products...">
+        <div class="container">
 
-            <select id="category-filter">
-                <option value="all">All Categories</option>
-                <option value="Accessories">Accessories</option>
-                <option value="Clothing">Clothing</option>
-                <option value="Footwear">Footwear</option>
-                <option value="Electronics">Electronics</option>
-                <option value="Home">Home</option>
-                <option value="Bags">Bags</option>
-            </select>
+            <!-- Heading -->
 
-        </div>
+            <div class="shop-heading">
 
-    </section>
-
-
-    <section id="products" class="section-p1">
-
-        <div class="section-heading">
-
-            <p>NovaShop Store</p>
-
-            <h2>All Products</h2>
-
-            <span>Choose your favourite products</span>
-
-        </div>
-
-
-        <div class="product-container">
-
-            <!-- Product 1 -->
-            <div class="product">
-
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
-                        alt="White T-Shirt">
-                </div>
-
-                <div class="product-info">
-
-                    <p class="product-category">Men's Fashion</p>
-
-                    <h3 class="product-name">Classic White T-Shirt</h3>
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                    <div class="product-bottom">
-
-                        <span class="product-price">₹799</span>
-
-                        <button class="add-cart" data-name="Classic White T-Shirt" data-price="799">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Product 2 -->
-            <div class="product">
-
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
-                        alt="Running Shoes">
-                </div>
-
-                <div class="product-info">
-
-                    <p class="product-category">Footwear</p>
-
-                    <h3 class="product-name">Premium Running Shoes</h3>
-
-                    <div class="stars">
-                        ★★★★☆
-                    </div>
-
-                    <div class="product-bottom">
-
-                        <span class="product-price">₹2,499</span>
-
-                        <button class="add-cart" data-name="Premium Running Shoes" data-price="2499">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Product 3 -->
-            <div class="product">
-
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
-                        alt="Smart Watch">
-                </div>
-
-                <div class="product-info">
-
-                    <p class="product-category">Accessories</p>
-
-                    <h3 class="product-name">Smart Watch</h3>
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                    <div class="product-bottom">
-
-                        <span class="product-price">₹3,999</span>
-
-                        <button class="add-cart" data-name="Smart Watch" data-price="3999">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Product 4 -->
-            <div class="product">
-
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
-                        alt="Backpack">
-                </div>
-
-                <div class="product-info">
-
-                    <p class="product-category">Bags</p>
-
-                    <h3 class="product-name">Urban Backpack</h3>
-
-                    <div class="stars">
-                        ★★★★☆
-                    </div>
-
-                    <div class="product-bottom">
-
-                        <span class="product-price">₹1,299</span>
-
-                        <button class="add-cart" data-name="Urban Backpack" data-price="1299">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Product 5 -->
-            <div class="product">
-
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80"
-                        alt="Leather Bag">
-                </div>
-
-                <div class="product-info">
-
-                    <p class="product-category">Accessories</p>
-
-                    <h3 class="product-name">Leather Hand Bag</h3>
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                    <div class="product-bottom">
-
-                        <span class="product-price">₹1,899</span>
-
-                        <button class="add-cart" data-name="Leather Hand Bag" data-price="1899">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Product 6 -->
-            <div class="product">
-
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80"
-                        alt="Sunglasses">
-                </div>
-
-                <div class="product-info">
-
-                    <p class="product-category">Eyewear</p>
-
-                    <h3 class="product-name">Classic Sunglasses</h3>
-
-                    <div class="stars">
-                        ★★★★☆
-                    </div>
-
-                    <div class="product-bottom">
-
-                        <span class="product-price">₹999</span>
-
-                        <button class="add-cart" data-name="Classic Sunglasses" data-price="999">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <footer>
-
-        <div class="footer-container">
-
-            <div class="footer-column">
-
-                <a href="index.html" class="footer-logo">
-                    NovaShop
-                </a>
+                <h1>Our Products</h1>
 
                 <p>
-                    Your one-stop destination for fashion
-                    and lifestyle products.
+                    Find products that match your style.
                 </p>
 
             </div>
 
-            <div class="footer-column">
 
-                <h3>Quick Links</h3>
+            <!-- =========================
+                 SEARCH & FILTER
+            ========================== -->
 
-                <a href="index.html">Home</a>
-                <a href="shop.html">Shop</a>
-                <a href="cart.html">Cart</a>
+            <div class="shop-controls">
+
+                <input type="text" id="product-search" placeholder="Search products..." autocomplete="off">
+
+                <select id="sort-products">
+
+                    <option value="default">
+                        Sort By
+                    </option>
+
+                    <option value="price-low">
+                        Price: Low to High
+                    </option>
+
+                    <option value="price-high">
+                        Price: High to Low
+                    </option>
+
+                    <option value="name-az">
+                        Name: A to Z
+                    </option>
+
+                    <option value="name-za">
+                        Name: Z to A
+                    </option>
+
+                </select>
 
             </div>
 
-            <div class="footer-column">
 
-                <h3>Customer Service</h3>
+            <!-- =========================
+                 PRODUCTS
+            ========================== -->
 
-                <a href="#">My Account</a>
-                <a href="#">Return Policy</a>
-                <a href="#">Help & Support</a>
+            <div class="products-grid">
 
-            </div>
 
-            <div class="footer-column">
+                <!-- PRODUCT 1 -->
 
-                <h3>Contact</h3>
+                <div class="product-card">
 
-                <p>India</p>
-                <p>+91 98765 43210</p>
-                <p>support@novashop.com</p>
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
+                        alt="Classic Watch">
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            Accessories
+                        </span>
+
+                        <h3>Classic Watch</h3>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                $49.99
+                            </span>
+
+                            <button class="add-cart" data-name="Classic Watch" data-price="49.99">
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 2 -->
+
+                <div class="product-card">
+
+                    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=600&q=80"
+                        alt="Fashion T-Shirt">
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            Clothing
+                        </span>
+
+                        <h3>Fashion T-Shirt</h3>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                $24.99
+                            </span>
+
+                            <button class="add-cart" data-name="Fashion T-Shirt" data-price="24.99">
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 3 -->
+
+                <div class="product-card">
+
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+                        alt="Running Shoes">
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            Footwear
+                        </span>
+
+                        <h3>Running Shoes</h3>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                $69.99
+                            </span>
+
+                            <button class="add-cart" data-name="Running Shoes" data-price="69.99">
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 4 -->
+
+                <div class="product-card">
+
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+                        alt="Wireless Headphones">
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            Electronics
+                        </span>
+
+                        <h3>Wireless Headphones</h3>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                $89.99
+                            </span>
+
+                            <button class="add-cart" data-name="Wireless Headphones" data-price="89.99">
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 5 -->
+
+                <div class="product-card">
+
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80"
+                        alt="Premium Coffee Mug">
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            Home
+                        </span>
+
+                        <h3>Premium Coffee Mug</h3>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                $14.99
+                            </span>
+
+                            <button class="add-cart" data-name="Premium Coffee Mug" data-price="14.99">
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 6 -->
+
+                <div class="product-card">
+
+                    <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80"
+                        alt="Leather Bag">
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            Bags
+                        </span>
+
+                        <h3>Leather Bag</h3>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                $79.99
+                            </span>
+
+                            <button class="add-cart" data-name="Leather Bag" data-price="79.99">
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
         </div>
 
-        <div class="copyright">
+    </main>
 
-            <p>© 2026 NovaShop. All Rights Reserved.</p>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 ShopEase. All Rights Reserved.
+            </p>
 
         </div>
 
     </footer>
 
 
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
 
 </body>
