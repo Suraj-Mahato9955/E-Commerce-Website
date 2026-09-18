@@ -323,47 +323,137 @@ if (checkoutForm) {
         window.location.href = "index.html";
     });
 }
+
 // =========================
 // PRODUCT SEARCH & FILTER
 // =========================
 
+// =========================
+// PRODUCT SEARCH, FILTER & SORT
+// =========================
+
 const productSearch = document.getElementById("product-search");
 const categoryFilter = document.getElementById("category-filter");
+const sortProducts = document.getElementById("sort-products");
 
-if (productSearch && categoryFilter) {
+if (productSearch && categoryFilter && sortProducts) {
 
-    const productCards = document.querySelectorAll(".product-card");
+    const productsGrid = document.querySelector(".products-grid");
+    const productCards = Array.from(
+        document.querySelectorAll(".product-card")
+    );
 
-    function filterProducts() {
+    function updateProducts() {
 
-        const searchText = productSearch.value.toLowerCase();
-        const selectedCategory = categoryFilter.value;
+        const searchText =
+            productSearch.value.trim().toLowerCase();
 
-        productCards.forEach((card) => {
+        const selectedCategory =
+            categoryFilter.value;
+
+        const sortValue =
+            sortProducts.value;
+
+        let filteredProducts = productCards.filter(function (card) {
 
             const productName =
-                card.querySelector("h3").textContent.toLowerCase();
+                card.querySelector("h3")
+                    .textContent
+                    .trim()
+                    .toLowerCase();
 
             const productCategory =
-                card.querySelector(".product-category").textContent;
+                card.querySelector(".product-category")
+                    .textContent
+                    .trim();
 
-            const matchesSearch =
+            const nameMatch =
                 productName.includes(searchText);
 
-            const matchesCategory =
+            const categoryMatch =
                 selectedCategory === "all" ||
                 productCategory === selectedCategory;
 
-            if (matchesSearch && matchesCategory) {
-                card.style.display = "";
-            } else {
-                card.style.display = "none";
+            return nameMatch && categoryMatch;
+        });
+
+
+        // Sorting
+
+        filteredProducts.sort(function (a, b) {
+
+            const nameA =
+                a.querySelector("h3")
+                    .textContent
+                    .trim()
+                    .toLowerCase();
+
+            const nameB =
+                b.querySelector("h3")
+                    .textContent
+                    .trim()
+                    .toLowerCase();
+
+            const priceA =
+                Number(
+                    a.querySelector(".price")
+                        .textContent
+                        .replace("$", "")
+                );
+
+            const priceB =
+                Number(
+                    b.querySelector(".price")
+                        .textContent
+                        .replace("$", "")
+                );
+
+
+            if (sortValue === "price-low") {
+                return priceA - priceB;
             }
 
+            if (sortValue === "price-high") {
+                return priceB - priceA;
+            }
+
+            if (sortValue === "name-az") {
+                return nameA.localeCompare(nameB);
+            }
+
+            if (sortValue === "name-za") {
+                return nameB.localeCompare(nameA);
+            }
+
+            return 0;
+        });
+
+
+        // Display products
+
+        productCards.forEach(function (card) {
+            card.style.display = "none";
+        });
+
+        filteredProducts.forEach(function (card) {
+            card.style.display = "block";
+            productsGrid.appendChild(card);
         });
     }
 
-    productSearch.addEventListener("input", filterProducts);
 
-    categoryFilter.addEventListener("change", filterProducts);
+    productSearch.addEventListener(
+        "input",
+        updateProducts
+    );
+
+    categoryFilter.addEventListener(
+        "change",
+        updateProducts
+    );
+
+    sortProducts.addEventListener(
+        "change",
+        updateProducts
+    );
 }
