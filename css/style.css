@@ -1236,3 +1236,53 @@ footer {
 #sort-products {
     width: 200px;
 }
+/* =========================
+   WISHLIST
+========================= */
+
+.product-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.product-actions .add-cart {
+    flex: 1;
+}
+
+.wishlist-btn {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #2a2e36;
+    border-radius: 8px;
+    background: #171a20;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.wishlist-btn:hover {
+    color: #ff4d6d;
+    border-color: #ff4d6d;
+}
+
+.wishlist-btn.active {
+    color: #ff4d6d;
+    border-color: #ff4d6d;
+    background: rgba(255, 77, 109, 0.1);
+}
+
+@media (max-width: 600px) {
+
+    .product-actions {
+        gap: 8px;
+    }
+
+    .wishlist-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+}
