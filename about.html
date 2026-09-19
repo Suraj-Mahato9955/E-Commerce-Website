@@ -1,1 +1,338 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us - ShopEase</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <style>
+        .about-page {
+            padding: 70px 0;
+        }
+
+        .about-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .about-content h1 {
+            font-size: 46px;
+            margin-bottom: 20px;
+        }
+
+        .about-content h1 span {
+            color: #00c9a7;
+        }
+
+        .about-content p {
+            color: #aaa;
+            line-height: 1.9;
+            margin-bottom: 15px;
+        }
+
+        .about-image {
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .about-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .about-section h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .about-section > p {
+            color: #aaa;
+            max-width: 650px;
+            margin: 0 auto 35px;
+        }
+
+        .about-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .about-card {
+            background: #171a20;
+            border: 1px solid #2a2e36;
+            border-radius: 12px;
+            padding: 30px 20px;
+            transition: 0.3s;
+        }
+
+        .about-card:hover {
+            transform: translateY(-6px);
+            border-color: #00c9a7;
+        }
+
+        .about-card i {
+            font-size: 32px;
+            color: #00c9a7;
+            margin-bottom: 18px;
+        }
+
+        .about-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .about-card p {
+            color: #aaa;
+            line-height: 1.7;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .stat {
+            padding: 25px;
+            background: #171a20;
+            border-radius: 10px;
+            border: 1px solid #2a2e36;
+        }
+
+        .stat h3 {
+            color: #00c9a7;
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+
+        .stat p {
+            color: #aaa;
+        }
+
+        @media (max-width: 800px) {
+            .about-hero {
+                grid-template-columns: 1fr;
+            }
+
+            .about-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .about-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .about-content h1 {
+                font-size: 34px;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container nav">
+
+        <a href="index.html" class="logo">
+            Shop<span>Ease</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html" class="active">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="cart.html" class="cart-link">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">0</span>
+        </a>
+
+    </div>
+</header>
+
+
+<main class="about-page">
+
+    <div class="container">
+
+        <section class="about-hero">
+
+            <div class="about-content">
+
+                <h1>
+                    Shopping Made <span>Simple.</span>
+                </h1>
+
+                <p>
+                    Welcome to ShopEase, a modern online shopping
+                    platform created to make everyday shopping
+                    simple, convenient and enjoyable.
+                </p>
+
+                <p>
+                    From fashion and electronics to home essentials,
+                    we bring useful products together in one place
+                    with a clean and easy-to-use shopping experience.
+                </p>
+
+            </div>
+
+            <div class="about-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=80"
+                    alt="Online Shopping"
+                >
+
+            </div>
+
+        </section>
+
+
+        <section class="about-section">
+
+            <h2>Why ShopEase?</h2>
+
+            <p>
+                We focus on creating a smooth shopping experience
+                from discovering products to completing an order.
+            </p>
+
+
+            <div class="about-cards">
+
+                <div class="about-card">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <h3>Easy Shopping</h3>
+
+                    <p>
+                        Browse products, explore categories and
+                        find what you need quickly.
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <h3>Trusted Experience</h3>
+
+                    <p>
+                        A clean and transparent shopping experience
+                        designed with customers in mind.
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                    <h3>Fast & Convenient</h3>
+
+                    <p>
+                        Simple cart and checkout flow makes shopping
+                        convenient from any device.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="about-section">
+
+            <h2>ShopEase By The Numbers</h2>
+
+            <div class="about-stats">
+
+                <div class="stat">
+                    <h3>100+</h3>
+                    <p>Products</p>
+                </div>
+
+                <div class="stat">
+                    <h3>10K+</h3>
+                    <p>Customers</p>
+                </div>
+
+                <div class="stat">
+                    <h3>24/7</h3>
+                    <p>Online Shopping</p>
+                </div>
+
+                <div class="stat">
+                    <h3>100%</h3>
+                    <p>Customer Focus</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container">
+
+        <p>
+            © 2026 ShopEase. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
