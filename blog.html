@@ -1,1 +1,402 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog - ShopEase</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <style>
+
+        .blog-page {
+            padding: 70px 0;
+        }
+
+        .blog-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .blog-heading h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .blog-heading p {
+            color: #aaa;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .blog-card {
+            background: #171a20;
+            border: 1px solid #2a2e36;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-6px);
+            border-color: #00c9a7;
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .blog-content {
+            padding: 22px;
+        }
+
+        .blog-category {
+            color: #00c9a7;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .blog-content h2 {
+            font-size: 21px;
+            margin: 10px 0;
+        }
+
+        .blog-content p {
+            color: #aaa;
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .read-more {
+            color: #00c9a7;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 900px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<header class="header">
+
+    <div class="container nav">
+
+        <a href="index.html" class="logo">
+            Shop<span>Ease</span>
+        </a>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="shop.html">Shop</a>
+
+            <a href="about.html">About</a>
+
+            <a href="blog.html" class="active">
+                Blog
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+        <a href="cart.html" class="cart-link">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span id="cart-count">0</span>
+
+        </a>
+
+    </div>
+
+</header>
+
+
+<main class="blog-page">
+
+    <div class="container">
+
+        <div class="blog-heading">
+
+            <h1>
+                ShopEase Blog
+            </h1>
+
+            <p>
+                Tips, ideas and guides for smarter shopping.
+            </p>
+
+        </div>
+
+
+        <div class="blog-grid">
+
+
+            <article class="blog-card">
+
+                <img
+                    class="blog-image"
+                    src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80"
+                    alt="Shopping Guide"
+                >
+
+                <div class="blog-content">
+
+                    <span class="blog-category">
+                        Shopping Guide
+                    </span>
+
+                    <h2>
+                        How to Choose the Right Product Online
+                    </h2>
+
+                    <p>
+                        Learn some simple tips to compare products,
+                        check important details and make better
+                        shopping decisions.
+                    </p>
+
+                    <a href="#" class="read-more">
+                        Read More →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="blog-card">
+
+                <img
+                    class="blog-image"
+                    src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=80"
+                    alt="Fashion Trends"
+                >
+
+                <div class="blog-content">
+
+                    <span class="blog-category">
+                        Fashion
+                    </span>
+
+                    <h2>
+                        Simple Fashion Trends for Everyday Style
+                    </h2>
+
+                    <p>
+                        Discover easy ways to create a modern
+                        everyday look without making your wardrobe
+                        complicated.
+                    </p>
+
+                    <a href="#" class="read-more">
+                        Read More →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="blog-card">
+
+                <img
+                    class="blog-image"
+                    src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=900&q=80"
+                    alt="Technology"
+                >
+
+                <div class="blog-content">
+
+                    <span class="blog-category">
+                        Technology
+                    </span>
+
+                    <h2>
+                        Useful Gadgets That Make Life Easier
+                    </h2>
+
+                    <p>
+                        Explore everyday technology and gadgets
+                        that can make work, entertainment and daily
+                        activities more convenient.
+                    </p>
+
+                    <a href="#" class="read-more">
+                        Read More →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="blog-card">
+
+                <img
+                    class="blog-image"
+                    src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=900&q=80"
+                    alt="Home Essentials"
+                >
+
+                <div class="blog-content">
+
+                    <span class="blog-category">
+                        Home
+                    </span>
+
+                    <h2>
+                        Make Your Home More Comfortable
+                    </h2>
+
+                    <p>
+                        Small changes and useful products can make
+                        your everyday home environment more practical
+                        and comfortable.
+                    </p>
+
+                    <a href="#" class="read-more">
+                        Read More →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="blog-card">
+
+                <img
+                    class="blog-image"
+                    src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80"
+                    alt="Online Shopping"
+                >
+
+                <div class="blog-content">
+
+                    <span class="blog-category">
+                        E-Commerce
+                    </span>
+
+                    <h2>
+                        Tips for a Better Online Shopping Experience
+                    </h2>
+
+                    <p>
+                        From creating a wishlist to managing your
+                        cart, discover ways to make online shopping
+                        easier.
+                    </p>
+
+                    <a href="#" class="read-more">
+                        Read More →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="blog-card">
+
+                <img
+                    class="blog-image"
+                    src="https://images.unsplash.com/photo-1556742111-a301076d9d18?auto=format&fit=crop&w=900&q=80"
+                    alt="Smart Shopping"
+                >
+
+                <div class="blog-content">
+
+                    <span class="blog-category">
+                        Tips
+                    </span>
+
+                    <h2>
+                        Smart Ways to Plan Your Shopping
+                    </h2>
+
+                    <p>
+                        Organize your shopping, compare your options
+                        and avoid unnecessary purchases with simple
+                        planning techniques.
+                    </p>
+
+                    <a href="#" class="read-more">
+                        Read More →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container">
+
+        <p>
+            © 2026 ShopEase. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
