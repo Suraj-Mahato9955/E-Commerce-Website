@@ -1,1 +1,249 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Product - ShopEase</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <style>
+
+        .product-details-page {
+            padding: 70px 0;
+            min-height: 70vh;
+        }
+
+        .product-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .product-details-image {
+            background: #171a20;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .product-details-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-details-info h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .product-details-info .details-category {
+            display: inline-block;
+            color: #00c9a7;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .product-details-info .details-rating {
+            color: #ffc107;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .product-details-info .details-price {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .product-description {
+            color: #aaa;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .details-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .details-cart-btn {
+            padding: 14px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #00c9a7;
+            color: #111;
+            font-family: inherit;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .details-cart-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .details-wishlist-btn {
+            width: 48px;
+            height: 48px;
+            border: 1px solid #2a2e36;
+            border-radius: 8px;
+            background: #171a20;
+            color: #aaa;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .details-wishlist-btn.active {
+            color: #ff4d6d;
+            border-color: #ff4d6d;
+        }
+
+        .back-shop {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #00c9a7;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+
+            .product-details {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .product-details-image img {
+                height: 350px;
+            }
+
+            .product-details-info h1 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+    <div class="container nav">
+
+        <a href="index.html" class="logo">
+            Shop<span>Ease</span>
+        </a>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="shop.html">Shop</a>
+
+            <a href="index.html#features">
+                Features
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+        <a href="cart.html" class="cart-link">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span id="cart-count">
+                0
+            </span>
+
+        </a>
+
+    </div>
+
+</header>
+
+
+<main class="product-details-page">
+
+    <div class="container">
+
+        <a
+            href="shop.html"
+            class="back-shop"
+        >
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Shop
+        </a>
+
+
+        <div
+            class="product-details"
+            id="product-details"
+        >
+
+            <!-- JavaScript will load product -->
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container">
+
+        <p>
+            © 2026 ShopEase. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
