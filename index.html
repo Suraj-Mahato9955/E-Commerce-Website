@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>NovaShop - E-Commerce Website</title>
+    <title>NovaShop - Modern E-Commerce</title>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -24,63 +29,104 @@
 <body>
 
     <!-- ================= HEADER ================= -->
+
     <header id="header">
 
-        <a href="index.html" class="logo">NovaShop</a>
+        <div class="nav">
 
-        <nav>
-            <ul id="navbar">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                NovaShop
+            </a>
 
-                <li>
-                    <a class="active" href="index.html">Home</a>
-                </li>
+            <!-- Navigation -->
+            <nav>
 
-                <li>
-                    <a href="#products">Shop</a>
-                </li>
+                <a class="active" href="index.html">
+                    Home
+                </a>
 
-                <li>
-                    <a href="#features">Features</a>
-                </li>
+                <a href="shop.html">
+                    Shop
+                </a>
 
-                <li>
-                    <a href="#newsletter">Contact</a>
-                </li>
+                <a href="about.html">
+                    About
+                </a>
 
-                <li>
-                    <a href="#" id="cart-link">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        <span id="cart-count">0</span>
-                    </a>
-                </li>
+                <a href="blog.html">
+                    Blog
+                </a>
 
-            </ul>
-        </nav>
+                <a href="contact.html">
+                    Contact
+                </a>
 
-        <!-- Mobile Menu -->
-        <div id="mobile">
-            <i class="fa-solid fa-bars"></i>
+            </nav>
+
+            <!-- Right Side -->
+            <div class="nav-actions">
+
+                <!-- Wishlist -->
+                <a href="wishlist.html" class="nav-icon" title="Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+
+                <!-- Cart -->
+                <a href="cart.html" class="cart-link" title="Shopping Cart">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span id="cart-count">
+                        0
+                    </span>
+
+                </a>
+
+                <!-- Mobile Menu -->
+                <button
+                    class="menu-toggle"
+                    id="menu-toggle"
+                    aria-label="Open Menu"
+                    aria-expanded="false"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
         </div>
 
     </header>
 
 
-    <!-- ================= HERO SECTION ================= -->
+    <!-- ================= HERO ================= -->
+
     <section id="hero">
 
         <div class="hero-content">
 
-            <p class="hero-small">New Collection</p>
-
-            <h1>Discover Your<br>Style</h1>
-
-            <p>
-                Shop the latest fashion, accessories and everyday essentials.
+            <p class="hero-small">
+                New Collection
             </p>
 
-            <a href="#products" class="hero-btn">
+            <h1>
+                Discover Your
+                <br>
+                Style
+            </h1>
+
+            <p>
+                Explore premium fashion, accessories and
+                everyday essentials designed for modern living.
+            </p>
+
+            <a href="shop.html" class="hero-btn">
+
                 Shop Now
+
                 <i class="fa-solid fa-arrow-right"></i>
+
             </a>
 
         </div>
@@ -89,32 +135,68 @@
 
 
     <!-- ================= FEATURES ================= -->
+
     <section id="features" class="section-p1">
 
         <div class="feature-container">
 
             <div class="feature-box">
+
                 <i class="fa-solid fa-truck"></i>
-                <h3>Free Shipping</h3>
-                <p>Free shipping on orders above ₹999</p>
+
+                <h3>
+                    Free Shipping
+                </h3>
+
+                <p>
+                    Free shipping on orders above ₹999
+                </p>
+
             </div>
 
+
             <div class="feature-box">
+
                 <i class="fa-solid fa-shield-halved"></i>
-                <h3>Secure Payment</h3>
-                <p>100% secure payment system</p>
+
+                <h3>
+                    Secure Payment
+                </h3>
+
+                <p>
+                    Safe and secure payment system
+                </p>
+
             </div>
 
+
             <div class="feature-box">
+
                 <i class="fa-solid fa-rotate-left"></i>
-                <h3>Easy Returns</h3>
-                <p>Easy returns within 7 days</p>
+
+                <h3>
+                    Easy Returns
+                </h3>
+
+                <p>
+                    Easy returns within 7 days
+                </p>
+
             </div>
 
+
             <div class="feature-box">
+
                 <i class="fa-solid fa-headset"></i>
-                <h3>24/7 Support</h3>
-                <p>We are here to help you</p>
+
+                <h3>
+                    24/7 Support
+                </h3>
+
+                <p>
+                    We're always here to help
+                </p>
+
             </div>
 
         </div>
@@ -123,16 +205,21 @@
 
 
     <!-- ================= PRODUCTS ================= -->
+
     <section id="products" class="section-p1">
 
         <div class="section-heading">
 
-            <p>Our Collection</p>
+            <p>
+                Our Collection
+            </p>
 
-            <h2>Featured Products</h2>
+            <h2>
+                Featured Products
+            </h2>
 
             <span>
-                Explore our most popular products
+                Discover some of our most popular products
             </span>
 
         </div>
@@ -140,30 +227,38 @@
 
         <div class="product-container">
 
+
             <!-- Product 1 -->
+
             <div class="product">
 
                 <div class="product-image">
+
                     <img
                         src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
-                        alt="White T-Shirt"
+                        alt="Classic White T-Shirt"
                     >
+
                 </div>
 
                 <div class="product-info">
 
-                    <p class="product-category">Men's Fashion</p>
+                    <p class="product-category">
+                        Men's Fashion
+                    </p>
 
                     <h3 class="product-name">
                         Classic White T-Shirt
                     </h3>
 
                     <div class="stars">
+
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
+
                     </div>
 
                     <div class="product-bottom">
@@ -177,7 +272,9 @@
                             data-name="Classic White T-Shirt"
                             data-price="799"
                         >
+
                             <i class="fa-solid fa-cart-shopping"></i>
+
                         </button>
 
                     </div>
@@ -188,29 +285,36 @@
 
 
             <!-- Product 2 -->
+
             <div class="product">
 
                 <div class="product-image">
+
                     <img
                         src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
-                        alt="Running Shoes"
+                        alt="Premium Running Shoes"
                     >
+
                 </div>
 
                 <div class="product-info">
 
-                    <p class="product-category">Footwear</p>
+                    <p class="product-category">
+                        Footwear
+                    </p>
 
                     <h3 class="product-name">
                         Premium Running Shoes
                     </h3>
 
                     <div class="stars">
+
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-regular fa-star"></i>
+
                     </div>
 
                     <div class="product-bottom">
@@ -224,7 +328,9 @@
                             data-name="Premium Running Shoes"
                             data-price="2499"
                         >
+
                             <i class="fa-solid fa-cart-shopping"></i>
+
                         </button>
 
                     </div>
@@ -235,29 +341,36 @@
 
 
             <!-- Product 3 -->
+
             <div class="product">
 
                 <div class="product-image">
+
                     <img
                         src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
                         alt="Smart Watch"
                     >
+
                 </div>
 
                 <div class="product-info">
 
-                    <p class="product-category">Accessories</p>
+                    <p class="product-category">
+                        Accessories
+                    </p>
 
                     <h3 class="product-name">
                         Smart Watch
                     </h3>
 
                     <div class="stars">
+
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
+
                     </div>
 
                     <div class="product-bottom">
@@ -271,7 +384,9 @@
                             data-name="Smart Watch"
                             data-price="3999"
                         >
+
                             <i class="fa-solid fa-cart-shopping"></i>
+
                         </button>
 
                     </div>
@@ -282,29 +397,36 @@
 
 
             <!-- Product 4 -->
+
             <div class="product">
 
                 <div class="product-image">
+
                     <img
                         src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
-                        alt="Backpack"
+                        alt="Urban Backpack"
                     >
+
                 </div>
 
                 <div class="product-info">
 
-                    <p class="product-category">Bags</p>
+                    <p class="product-category">
+                        Bags
+                    </p>
 
                     <h3 class="product-name">
                         Urban Backpack
                     </h3>
 
                     <div class="stars">
+
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-regular fa-star"></i>
+
                     </div>
 
                     <div class="product-bottom">
@@ -318,7 +440,9 @@
                             data-name="Urban Backpack"
                             data-price="1299"
                         >
+
                             <i class="fa-solid fa-cart-shopping"></i>
+
                         </button>
 
                     </div>
@@ -329,29 +453,36 @@
 
 
             <!-- Product 5 -->
+
             <div class="product">
 
                 <div class="product-image">
+
                     <img
                         src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80"
-                        alt="Leather Bag"
+                        alt="Leather Hand Bag"
                     >
+
                 </div>
 
                 <div class="product-info">
 
-                    <p class="product-category">Accessories</p>
+                    <p class="product-category">
+                        Accessories
+                    </p>
 
                     <h3 class="product-name">
                         Leather Hand Bag
                     </h3>
 
                     <div class="stars">
+
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
+
                     </div>
 
                     <div class="product-bottom">
@@ -365,7 +496,9 @@
                             data-name="Leather Hand Bag"
                             data-price="1899"
                         >
+
                             <i class="fa-solid fa-cart-shopping"></i>
+
                         </button>
 
                     </div>
@@ -376,29 +509,36 @@
 
 
             <!-- Product 6 -->
+
             <div class="product">
 
                 <div class="product-image">
+
                     <img
                         src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80"
-                        alt="Sunglasses"
+                        alt="Classic Sunglasses"
                     >
+
                 </div>
 
                 <div class="product-info">
 
-                    <p class="product-category">Eyewear</p>
+                    <p class="product-category">
+                        Eyewear
+                    </p>
 
                     <h3 class="product-name">
                         Classic Sunglasses
                     </h3>
 
                     <div class="stars">
+
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-regular fa-star"></i>
+
                     </div>
 
                     <div class="product-bottom">
@@ -412,7 +552,9 @@
                             data-name="Classic Sunglasses"
                             data-price="999"
                         >
+
                             <i class="fa-solid fa-cart-shopping"></i>
+
                         </button>
 
                     </div>
@@ -423,26 +565,13 @@
 
         </div>
 
-    </section>
 
+        <!-- View All Products -->
 
-    <!-- ================= BANNER ================= -->
-    <section id="banner">
+        <div class="home-shop-btn">
 
-        <div class="banner-content">
-
-            <p>Special Offer</p>
-
-            <h2>
-                Up to <span>50% Off</span>
-            </h2>
-
-            <p>
-                Limited time offer on selected products
-            </p>
-
-            <a href="#products">
-                Explore Deals
+            <a href="shop.html">
+                View All Products
                 <i class="fa-solid fa-arrow-right"></i>
             </a>
 
@@ -451,14 +580,48 @@
     </section>
 
 
+    <!-- ================= BANNER ================= -->
+
+    <section id="banner">
+
+        <div class="banner-content">
+
+            <p>
+                Special Offer
+            </p>
+
+            <h2>
+                Up to <span>50% Off</span>
+            </h2>
+
+            <p>
+                Limited-time offers on selected products
+            </p>
+
+            <a href="shop.html">
+
+                Explore Deals
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
     <!-- ================= NEWSLETTER ================= -->
+
     <section id="newsletter">
 
         <div class="newsletter-content">
 
             <div class="newstext">
 
-                <p>Subscribe to our newsletter</p>
+                <p>
+                    Stay Updated
+                </p>
 
                 <h2>
                     Get updates about our
@@ -466,6 +629,7 @@
                 </h2>
 
             </div>
+
 
             <form class="form" id="newsletter-form">
 
@@ -488,9 +652,13 @@
 
 
     <!-- ================= FOOTER ================= -->
+
     <footer>
 
         <div class="footer-container">
+
+
+            <!-- Brand -->
 
             <div class="footer-column">
 
@@ -500,7 +668,7 @@
 
                 <p>
                     Your one-stop destination for
-                    fashion and lifestyle products.
+                    fashion, accessories and lifestyle products.
                 </p>
 
                 <div class="social-icons">
@@ -526,33 +694,67 @@
             </div>
 
 
+            <!-- Quick Links -->
+
             <div class="footer-column">
 
-                <h3>Quick Links</h3>
+                <h3>
+                    Quick Links
+                </h3>
 
-                <a href="index.html">Home</a>
-                <a href="#products">Shop</a>
-                <a href="#features">Features</a>
-                <a href="#newsletter">Contact</a>
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="blog.html">
+                    Blog
+                </a>
 
             </div>
 
 
+            <!-- Customer Service -->
+
             <div class="footer-column">
 
-                <h3>Customer Service</h3>
+                <h3>
+                    Customer Service
+                </h3>
 
-                <a href="#">My Account</a>
-                <a href="#">Order Tracking</a>
-                <a href="#">Return Policy</a>
-                <a href="#">Help & Support</a>
+                <a href="wishlist.html">
+                    Wishlist
+                </a>
+
+                <a href="cart.html">
+                    Shopping Cart
+                </a>
+
+                <a href="contact.html">
+                    Contact Support
+                </a>
+
+                <a href="about.html">
+                    Return Policy
+                </a>
 
             </div>
 
 
+            <!-- Contact -->
+
             <div class="footer-column">
 
-                <h3>Contact Us</h3>
+                <h3>
+                    Contact Us
+                </h3>
 
                 <p>
                     <i class="fa-solid fa-location-dot"></i>
@@ -589,4 +791,5 @@
     <script src="js/script.js"></script>
 
 </body>
+
 </html>
