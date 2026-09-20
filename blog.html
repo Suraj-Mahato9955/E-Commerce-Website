@@ -1,12 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Blog - ShopEase</title>
+    <title>Blog - NovaShop</title>
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -22,381 +20,514 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
-
-    <style>
-
-        .blog-page {
-            padding: 70px 0;
-        }
-
-        .blog-heading {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .blog-heading h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
-
-        .blog-heading p {
-            color: #aaa;
-        }
-
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .blog-card {
-            background: #171a20;
-            border: 1px solid #2a2e36;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: 0.3s;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-6px);
-            border-color: #00c9a7;
-        }
-
-        .blog-image {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .blog-content {
-            padding: 22px;
-        }
-
-        .blog-category {
-            color: #00c9a7;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .blog-content h2 {
-            font-size: 21px;
-            margin: 10px 0;
-        }
-
-        .blog-content p {
-            color: #aaa;
-            line-height: 1.7;
-            margin-bottom: 18px;
-        }
-
-        .read-more {
-            color: #00c9a7;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .read-more:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 900px) {
-            .blog-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 600px) {
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-    </style>
-
 </head>
 
 <body>
 
+    <!-- Header -->
+    <header id="header">
+        <div class="nav">
 
-<header class="header">
+            <a href="index.html" class="logo">NovaShop</a>
 
-    <div class="container nav">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
 
-        <a href="index.html" class="logo">
-            Shop<span>Ease</span>
-        </a>
+            <div class="nav-actions">
 
-        <nav>
+                <a href="wishlist.html" class="nav-icon" title="Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                </a>
 
-            <a href="index.html">Home</a>
+                <a href="cart.html" class="cart-link" title="Shopping Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-count">0</span>
+                </a>
 
-            <a href="shop.html">Shop</a>
+                <button
+                    class="menu-toggle"
+                    id="menu-toggle"
+                    type="button"
+                    aria-label="Open Menu"
+                    aria-expanded="false"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
 
-            <a href="about.html">About</a>
+            </div>
 
-            <a href="blog.html" class="active">
-                Blog
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </nav>
-
-        <a href="cart.html" class="cart-link">
-
-            <i class="fa-solid fa-cart-shopping"></i>
-
-            <span id="cart-count">0</span>
-
-        </a>
-
-    </div>
-
-</header>
+        </div>
+    </header>
 
 
-<main class="blog-page">
+    <!-- Blog -->
+    <main>
 
-    <div class="container">
+        <section class="blog-page">
 
-        <div class="blog-heading">
+            <div class="section-heading">
 
-            <h1>
-                ShopEase Blog
-            </h1>
+                <p class="section-subtitle">NOVA INSIGHTS</p>
+
+                <h1>Our Blog</h1>
+
+                <p>
+                    Discover shopping tips, style inspiration,
+                    technology guides and more.
+                </p>
+
+            </div>
+
+
+            <!-- Featured Article -->
+            <article class="featured-blog">
+
+                <div class="featured-blog-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80"
+                        alt="Smart shopping"
+                    >
+
+                </div>
+
+
+                <div class="featured-blog-content">
+
+                    <span class="blog-category">
+                        SHOPPING GUIDE
+                    </span>
+
+                    <h2>
+                        How to Build a Smarter Online Shopping Experience
+                    </h2>
+
+                    <p>
+                        Online shopping should be simple and enjoyable.
+                        Learn how to compare products, understand reviews
+                        and make better purchasing decisions.
+                    </p>
+
+                    <div class="blog-meta">
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            September 2026
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            5 min read
+                        </span>
+
+                    </div>
+
+                    <a href="#" class="blog-read-btn">
+                        Read Article
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Blog Grid -->
+            <div class="blog-grid">
+
+
+                <!-- Blog 1 -->
+                <article class="blog-card">
+
+                    <div class="blog-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+                            alt="Smart watch"
+                        >
+
+                    </div>
+
+                    <div class="blog-content">
+
+                        <span class="blog-category">
+                            TECHNOLOGY
+                        </span>
+
+                        <h3>
+                            Things to Consider Before Buying a Smartwatch
+                        </h3>
+
+                        <p>
+                            Battery life, features, design and compatibility
+                            are some important things to check.
+                        </p>
+
+                        <div class="blog-meta">
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                4 min read
+                            </span>
+
+                            <a href="#">
+                                Read More
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Blog 2 -->
+                <article class="blog-card">
+
+                    <div class="blog-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80"
+                            alt="Fashion clothing"
+                        >
+
+                    </div>
+
+                    <div class="blog-content">
+
+                        <span class="blog-category">
+                            FASHION
+                        </span>
+
+                        <h3>
+                            Simple Ways to Upgrade Your Everyday Style
+                        </h3>
+
+                        <p>
+                            Discover simple clothing combinations that
+                            can make your everyday look more polished.
+                        </p>
+
+                        <div class="blog-meta">
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                3 min read
+                            </span>
+
+                            <a href="#">
+                                Read More
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Blog 3 -->
+                <article class="blog-card">
+
+                    <div class="blog-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+                            alt="Wireless headphones"
+                        >
+
+                    </div>
+
+                    <div class="blog-content">
+
+                        <span class="blog-category">
+                            GADGETS
+                        </span>
+
+                        <h3>
+                            What Makes a Good Pair of Wireless Headphones?
+                        </h3>
+
+                        <p>
+                            Explore the key features to consider when
+                            choosing headphones for everyday use.
+                        </p>
+
+                        <div class="blog-meta">
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                4 min read
+                            </span>
+
+                            <a href="#">
+                                Read More
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Blog 4 -->
+                <article class="blog-card">
+
+                    <div class="blog-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"
+                            alt="Travel backpack"
+                        >
+
+                    </div>
+
+                    <div class="blog-content">
+
+                        <span class="blog-category">
+                            LIFESTYLE
+                        </span>
+
+                        <h3>
+                            Choosing the Right Backpack for Everyday Life
+                        </h3>
+
+                        <p>
+                            A practical guide to finding a backpack that
+                            fits your work, travel and daily needs.
+                        </p>
+
+                        <div class="blog-meta">
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                5 min read
+                            </span>
+
+                            <a href="#">
+                                Read More
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Blog 5 -->
+                <article class="blog-card">
+
+                    <div class="blog-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
+                            alt="Coffee mug"
+                        >
+
+                    </div>
+
+                    <div class="blog-content">
+
+                        <span class="blog-category">
+                            HOME
+                        </span>
+
+                        <h3>
+                            Creating a Better Coffee Corner at Home
+                        </h3>
+
+                        <p>
+                            Small changes can turn an ordinary corner
+                            into a comfortable and stylish coffee space.
+                        </p>
+
+                        <div class="blog-meta">
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                3 min read
+                            </span>
+
+                            <a href="#">
+                                Read More
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Blog 6 -->
+                <article class="blog-card">
+
+                    <div class="blog-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80"
+                            alt="Online shopping"
+                        >
+
+                    </div>
+
+                    <div class="blog-content">
+
+                        <span class="blog-category">
+                            TIPS
+                        </span>
+
+                        <h3>
+                            6 Simple Tips for Safer Online Shopping
+                        </h3>
+
+                        <p>
+                            Learn some practical habits that can help
+                            you shop online more safely.
+                        </p>
+
+                        <div class="blog-meta">
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                4 min read
+                            </span>
+
+                            <a href="#">
+                                Read More
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+
+        <div class="newsletter-content">
+
+            <p class="section-subtitle">STAY UPDATED</p>
+
+            <h2>Get the latest from NovaShop</h2>
 
             <p>
-                Tips, ideas and guides for smarter shopping.
+                Subscribe for new products, shopping tips
+                and exclusive updates.
+            </p>
+
+            <form id="newsletter-form">
+
+                <input
+                    type="email"
+                    placeholder="Enter your email address"
+                    required
+                >
+
+                <button type="submit">
+                    Subscribe
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-box">
+
+                <h2>NovaShop</h2>
+
+                <p>
+                    Discover quality products, modern style
+                    and a seamless shopping experience.
+                </p>
+
+                <div class="social-icons">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-box">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+
+            </div>
+
+
+            <div class="footer-box">
+
+                <h3>Customer Care</h3>
+
+                <a href="contact.html">Contact Us</a>
+                <a href="cart.html">Shopping Cart</a>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="checkout.html">Checkout</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 NovaShop. All Rights Reserved.
             </p>
 
         </div>
 
+    </footer>
 
-        <div class="blog-grid">
 
-
-            <article class="blog-card">
-
-                <img
-                    class="blog-image"
-                    src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80"
-                    alt="Shopping Guide"
-                >
-
-                <div class="blog-content">
-
-                    <span class="blog-category">
-                        Shopping Guide
-                    </span>
-
-                    <h2>
-                        How to Choose the Right Product Online
-                    </h2>
-
-                    <p>
-                        Learn some simple tips to compare products,
-                        check important details and make better
-                        shopping decisions.
-                    </p>
-
-                    <a href="#" class="read-more">
-                        Read More →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <article class="blog-card">
-
-                <img
-                    class="blog-image"
-                    src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=80"
-                    alt="Fashion Trends"
-                >
-
-                <div class="blog-content">
-
-                    <span class="blog-category">
-                        Fashion
-                    </span>
-
-                    <h2>
-                        Simple Fashion Trends for Everyday Style
-                    </h2>
-
-                    <p>
-                        Discover easy ways to create a modern
-                        everyday look without making your wardrobe
-                        complicated.
-                    </p>
-
-                    <a href="#" class="read-more">
-                        Read More →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <article class="blog-card">
-
-                <img
-                    class="blog-image"
-                    src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=900&q=80"
-                    alt="Technology"
-                >
-
-                <div class="blog-content">
-
-                    <span class="blog-category">
-                        Technology
-                    </span>
-
-                    <h2>
-                        Useful Gadgets That Make Life Easier
-                    </h2>
-
-                    <p>
-                        Explore everyday technology and gadgets
-                        that can make work, entertainment and daily
-                        activities more convenient.
-                    </p>
-
-                    <a href="#" class="read-more">
-                        Read More →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <article class="blog-card">
-
-                <img
-                    class="blog-image"
-                    src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=900&q=80"
-                    alt="Home Essentials"
-                >
-
-                <div class="blog-content">
-
-                    <span class="blog-category">
-                        Home
-                    </span>
-
-                    <h2>
-                        Make Your Home More Comfortable
-                    </h2>
-
-                    <p>
-                        Small changes and useful products can make
-                        your everyday home environment more practical
-                        and comfortable.
-                    </p>
-
-                    <a href="#" class="read-more">
-                        Read More →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <article class="blog-card">
-
-                <img
-                    class="blog-image"
-                    src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80"
-                    alt="Online Shopping"
-                >
-
-                <div class="blog-content">
-
-                    <span class="blog-category">
-                        E-Commerce
-                    </span>
-
-                    <h2>
-                        Tips for a Better Online Shopping Experience
-                    </h2>
-
-                    <p>
-                        From creating a wishlist to managing your
-                        cart, discover ways to make online shopping
-                        easier.
-                    </p>
-
-                    <a href="#" class="read-more">
-                        Read More →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <article class="blog-card">
-
-                <img
-                    class="blog-image"
-                    src="https://images.unsplash.com/photo-1556742111-a301076d9d18?auto=format&fit=crop&w=900&q=80"
-                    alt="Smart Shopping"
-                >
-
-                <div class="blog-content">
-
-                    <span class="blog-category">
-                        Tips
-                    </span>
-
-                    <h2>
-                        Smart Ways to Plan Your Shopping
-                    </h2>
-
-                    <p>
-                        Organize your shopping, compare your options
-                        and avoid unnecessary purchases with simple
-                        planning techniques.
-                    </p>
-
-                    <a href="#" class="read-more">
-                        Read More →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </div>
-
-</main>
-
-
-<footer class="footer">
-
-    <div class="container">
-
-        <p>
-            © 2026 ShopEase. All Rights Reserved.
-        </p>
-
-    </div>
-
-</footer>
-
-
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>
