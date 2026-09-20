@@ -20,15 +20,335 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
+
+    <style>
+        /* ========================================
+           ABOUT PAGE
+        ======================================== */
+
+        .about-page {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 24px;
+            box-sizing: border-box;
+        }
+
+        /* Page heading */
+        .about-page .section-heading {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 60px;
+        }
+
+        .about-page .section-subtitle {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            opacity: 0.7;
+        }
+
+        .about-page .section-heading h1,
+        .about-page .section-heading h2 {
+            margin: 0 0 14px;
+            font-size: 42px;
+            line-height: 1.2;
+        }
+
+        .about-page .section-heading > p:last-child {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.8;
+            opacity: 0.7;
+        }
+
+
+        /* ========================================
+           STORY SECTION
+        ======================================== */
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 110px;
+        }
+
+        .about-image {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 18px;
+        }
+
+        .about-image img {
+            display: block;
+            width: 100%;
+            height: 430px;
+            object-fit: cover;
+        }
+
+        .about-text {
+            padding: 10px 0;
+        }
+
+        .about-text .section-subtitle {
+            margin-bottom: 10px;
+        }
+
+        .about-text h2 {
+            font-size: 38px;
+            line-height: 1.2;
+            margin: 0 0 20px;
+        }
+
+        .about-text p:not(.section-subtitle) {
+            font-size: 15px;
+            line-height: 1.9;
+            margin: 0 0 18px;
+            opacity: 0.75;
+        }
+
+
+        /* ========================================
+           VALUES
+        ======================================== */
+
+        .about-values {
+            margin-bottom: 100px;
+        }
+
+        .about-values .section-heading {
+            margin-bottom: 45px;
+        }
+
+        .about-values .section-heading h2 {
+            font-size: 36px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .value-card {
+            padding: 30px 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.02);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(0, 255, 200, 0.35);
+        }
+
+        .value-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            background: rgba(0, 255, 200, 0.08);
+            font-size: 20px;
+        }
+
+        .value-card h3 {
+            font-size: 18px;
+            margin: 0 0 12px;
+        }
+
+        .value-card p {
+            margin: 0;
+            font-size: 13px;
+            line-height: 1.7;
+            opacity: 0.65;
+        }
+
+
+        /* ========================================
+           STATS
+        ======================================== */
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 45px 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item strong {
+            display: block;
+            font-size: 32px;
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+
+        .stat-item span {
+            display: block;
+            font-size: 13px;
+            opacity: 0.65;
+        }
+
+
+        /* ========================================
+           FOOTER
+        ======================================== */
+
+        footer {
+            margin-top: 0;
+        }
+
+
+        /* ========================================
+           TABLET
+        ======================================== */
+
+        @media (max-width: 900px) {
+
+            .about-page {
+                padding: 65px 24px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-image img {
+                height: 400px;
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-stats {
+                grid-template-columns: repeat(2, 1fr);
+                row-gap: 35px;
+            }
+        }
+
+
+        /* ========================================
+           MOBILE
+        ======================================== */
+
+        @media (max-width: 600px) {
+
+            .about-page {
+                padding: 50px 18px;
+            }
+
+            .about-page .section-heading {
+                margin-bottom: 40px;
+            }
+
+            .about-page .section-heading h1 {
+                font-size: 32px;
+            }
+
+            .about-page .section-heading h2 {
+                font-size: 28px;
+            }
+
+            .about-content {
+                gap: 30px;
+                margin-bottom: 70px;
+            }
+
+            .about-image img {
+                height: 280px;
+            }
+
+            .about-text h2 {
+                font-size: 30px;
+            }
+
+            .about-text p:not(.section-subtitle) {
+                font-size: 14px;
+                line-height: 1.8;
+            }
+
+            .about-values {
+                margin-bottom: 70px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .value-card {
+                padding: 25px 20px;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr 1fr;
+                padding: 35px 10px;
+            }
+
+            .stat-item strong {
+                font-size: 26px;
+            }
+
+            .stat-item span {
+                font-size: 12px;
+            }
+        }
+
+
+        /* ========================================
+           SMALL MOBILE
+        ======================================== */
+
+        @media (max-width: 400px) {
+
+            .about-page {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+            .about-page .section-heading h1 {
+                font-size: 28px;
+            }
+
+            .about-image img {
+                height: 240px;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+        }
+    </style>
 </head>
+
 
 <body>
 
-    <!-- Header -->
+    <!-- ================= HEADER ================= -->
+
     <header id="header">
+
         <div class="nav">
 
-            <a href="index.html" class="logo">NovaShop</a>
+            <a href="index.html" class="logo">
+                NovaShop
+            </a>
 
             <nav>
                 <a href="index.html">Home</a>
@@ -40,11 +360,19 @@
 
             <div class="nav-actions">
 
-                <a href="wishlist.html" class="nav-icon" title="Wishlist">
+                <a
+                    href="wishlist.html"
+                    class="nav-icon"
+                    title="Wishlist"
+                >
                     <i class="fa-regular fa-heart"></i>
                 </a>
 
-                <a href="cart.html" class="cart-link" title="Shopping Cart">
+                <a
+                    href="cart.html"
+                    class="cart-link"
+                    title="Shopping Cart"
+                >
                     <i class="fa-solid fa-bag-shopping"></i>
                     <span id="cart-count">0</span>
                 </a>
@@ -62,19 +390,27 @@
             </div>
 
         </div>
+
     </header>
 
 
-    <!-- About Hero -->
+    <!-- ================= MAIN ================= -->
+
     <main>
 
         <section class="about-page">
 
+            <!-- PAGE HEADING -->
+
             <div class="section-heading">
 
-                <p class="section-subtitle">OUR STORY</p>
+                <p class="section-subtitle">
+                    OUR STORY
+                </p>
 
-                <h1>About NovaShop</h1>
+                <h1>
+                    About NovaShop
+                </h1>
 
                 <p>
                     A modern shopping experience built around
@@ -84,7 +420,8 @@
             </div>
 
 
-            <!-- Story -->
+            <!-- ================= STORY ================= -->
+
             <div class="about-content">
 
                 <div class="about-image">
@@ -131,19 +468,26 @@
             </div>
 
 
-            <!-- Values -->
+            <!-- ================= VALUES ================= -->
+
             <div class="about-values">
 
                 <div class="section-heading">
 
-                    <p class="section-subtitle">WHY NOVASHOP</p>
+                    <p class="section-subtitle">
+                        WHY NOVASHOP
+                    </p>
 
-                    <h2>What We Value</h2>
+                    <h2>
+                        What We Value
+                    </h2>
 
                 </div>
 
 
                 <div class="values-grid">
+
+                    <!-- Quality -->
 
                     <div class="value-card">
 
@@ -151,7 +495,9 @@
                             <i class="fa-solid fa-gem"></i>
                         </div>
 
-                        <h3>Quality</h3>
+                        <h3>
+                            Quality
+                        </h3>
 
                         <p>
                             We focus on products that offer
@@ -161,13 +507,17 @@
                     </div>
 
 
+                    <!-- Simple Experience -->
+
                     <div class="value-card">
 
                         <div class="value-icon">
                             <i class="fa-solid fa-bolt"></i>
                         </div>
 
-                        <h3>Simple Experience</h3>
+                        <h3>
+                            Simple Experience
+                        </h3>
 
                         <p>
                             Clean design and easy navigation make
@@ -177,13 +527,17 @@
                     </div>
 
 
+                    <!-- Customer First -->
+
                     <div class="value-card">
 
                         <div class="value-icon">
                             <i class="fa-solid fa-heart"></i>
                         </div>
 
-                        <h3>Customer First</h3>
+                        <h3>
+                            Customer First
+                        </h3>
 
                         <p>
                             We design every part of the experience
@@ -193,13 +547,17 @@
                     </div>
 
 
+                    <!-- Trust -->
+
                     <div class="value-card">
 
                         <div class="value-icon">
                             <i class="fa-solid fa-shield-halved"></i>
                         </div>
 
-                        <h3>Trust</h3>
+                        <h3>
+                            Trust
+                        </h3>
 
                         <p>
                             Transparency and a secure shopping
@@ -213,41 +571,58 @@
             </div>
 
 
-            <!-- Stats -->
+            <!-- ================= STATS ================= -->
+
             <div class="about-stats">
 
                 <div class="stat-item">
 
-                    <strong>100+</strong>
+                    <strong>
+                        100+
+                    </strong>
 
-                    <span>Products</span>
-
-                </div>
-
-
-                <div class="stat-item">
-
-                    <strong>5K+</strong>
-
-                    <span>Happy Customers</span>
+                    <span>
+                        Products
+                    </span>
 
                 </div>
 
 
                 <div class="stat-item">
 
-                    <strong>24/7</strong>
+                    <strong>
+                        5K+
+                    </strong>
 
-                    <span>Customer Support</span>
+                    <span>
+                        Happy Customers
+                    </span>
 
                 </div>
 
 
                 <div class="stat-item">
 
-                    <strong>100%</strong>
+                    <strong>
+                        24/7
+                    </strong>
 
-                    <span>Secure Shopping</span>
+                    <span>
+                        Customer Support
+                    </span>
+
+                </div>
+
+
+                <div class="stat-item">
+
+                    <strong>
+                        100%
+                    </strong>
+
+                    <span>
+                        Secure Shopping
+                    </span>
 
                 </div>
 
@@ -258,14 +633,19 @@
     </main>
 
 
-    <!-- Footer -->
+    <!-- ================= FOOTER ================= -->
+
     <footer>
 
         <div class="footer-container">
 
+            <!-- Brand -->
+
             <div class="footer-box">
 
-                <h2>NovaShop</h2>
+                <h2>
+                    NovaShop
+                </h2>
 
                 <p>
                     Discover quality products, modern style
@@ -274,15 +654,24 @@
 
                 <div class="social-icons">
 
-                    <a href="#" aria-label="Instagram">
+                    <a
+                        href="#"
+                        aria-label="Instagram"
+                    >
                         <i class="fa-brands fa-instagram"></i>
                     </a>
 
-                    <a href="#" aria-label="Facebook">
+                    <a
+                        href="#"
+                        aria-label="Facebook"
+                    >
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
 
-                    <a href="#" aria-label="Twitter">
+                    <a
+                        href="#"
+                        aria-label="Twitter"
+                    >
                         <i class="fa-brands fa-x-twitter"></i>
                     </a>
 
@@ -291,26 +680,56 @@
             </div>
 
 
+            <!-- Quick Links -->
+
             <div class="footer-box">
 
-                <h3>Quick Links</h3>
+                <h3>
+                    Quick Links
+                </h3>
 
-                <a href="index.html">Home</a>
-                <a href="shop.html">Shop</a>
-                <a href="about.html">About</a>
-                <a href="blog.html">Blog</a>
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="blog.html">
+                    Blog
+                </a>
 
             </div>
 
 
+            <!-- Customer Care -->
+
             <div class="footer-box">
 
-                <h3>Customer Care</h3>
+                <h3>
+                    Customer Care
+                </h3>
 
-                <a href="contact.html">Contact Us</a>
-                <a href="cart.html">Shopping Cart</a>
-                <a href="wishlist.html">Wishlist</a>
-                <a href="checkout.html">Checkout</a>
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+                <a href="cart.html">
+                    Shopping Cart
+                </a>
+
+                <a href="wishlist.html">
+                    Wishlist
+                </a>
+
+                <a href="checkout.html">
+                    Checkout
+                </a>
 
             </div>
 
