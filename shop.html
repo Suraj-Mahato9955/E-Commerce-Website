@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Shop - ShopEase</title>
+    <title>Shop - NovaShop</title>
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -23,27 +23,73 @@
 
 <body>
 
-<header class="header">
+<!-- =========================
+     HEADER
+========================= -->
+
+<header id="header">
 
     <div class="container nav">
 
         <a href="index.html" class="logo">
-            Shop<span>Ease</span>
+            NovaShop
         </a>
 
         <nav>
-            <a href="index.html">Home</a>
-            <a href="shop.html" class="active">Shop</a>
-            <a href="index.html#features">Features</a>
-            <a href="contact.html">Contact</a>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="shop.html" class="active">
+                Shop
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="blog.html">
+                Blog
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
         </nav>
 
-        <div class="nav-icons">
+        <div class="nav-actions">
 
-            <a href="cart.html" class="cart-link">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span id="cart-count">0</span>
+            <a
+                href="wishlist.html"
+                class="nav-icon"
+                title="Wishlist"
+            >
+                <i class="fa-regular fa-heart"></i>
             </a>
+
+            <a
+                href="cart.html"
+                class="cart-link"
+                title="Shopping Cart"
+            >
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span id="cart-count">
+                    0
+                </span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                type="button"
+                aria-label="Open Menu"
+                aria-expanded="false"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
         </div>
 
@@ -52,53 +98,90 @@
 </header>
 
 
+<!-- =========================
+     SHOP PAGE
+========================= -->
+
 <main class="shop-page">
 
     <div class="container">
 
+        <!-- SHOP HEADING -->
+
         <div class="shop-heading">
 
-            <h1>Our Products</h1>
+            <span class="section-subtitle">
+                EXPLORE COLLECTION
+            </span>
+
+            <h1>
+                Our Products
+            </h1>
 
             <p>
-                Discover our collection of quality products.
+                Discover quality products designed for your everyday lifestyle.
             </p>
 
         </div>
 
 
-        <!-- SEARCH / FILTER / SORT -->
+        <!-- =========================
+             SEARCH / FILTER / SORT
+        ========================= -->
 
         <div class="shop-controls">
 
-            <input
-                type="text"
-                id="product-search"
-                placeholder="Search products..."
-            >
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="product-search"
+                    placeholder="Search products..."
+                >
+
+            </div>
+
 
             <select id="category-filter">
 
-                <option value="all">All Categories</option>
+                <option value="all">
+                    All Categories
+                </option>
 
-                <option value="Accessories">Accessories</option>
+                <option value="Accessories">
+                    Accessories
+                </option>
 
-                <option value="Clothing">Clothing</option>
+                <option value="Clothing">
+                    Clothing
+                </option>
 
-                <option value="Footwear">Footwear</option>
+                <option value="Footwear">
+                    Footwear
+                </option>
 
-                <option value="Electronics">Electronics</option>
+                <option value="Electronics">
+                    Electronics
+                </option>
 
-                <option value="Home">Home</option>
+                <option value="Home">
+                    Home
+                </option>
 
-                <option value="Bags">Bags</option>
+                <option value="Bags">
+                    Bags
+                </option>
 
             </select>
 
 
             <select id="sort-products">
 
-                <option value="default">Sort By</option>
+                <option value="default">
+                    Sort By
+                </option>
 
                 <option value="price-low">
                     Price: Low to High
@@ -121,7 +204,9 @@
         </div>
 
 
-        <!-- PRODUCTS -->
+        <!-- =========================
+             PRODUCTS
+        ========================= -->
 
         <div class="products-grid">
 
@@ -130,22 +215,30 @@
 
             <div class="product-card">
 
-                <img
-                    src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80"
-                    alt="Classic Watch"
-                >
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80"
+                        alt="Classic Watch"
+                    >
+
+                </div>
 
                 <span class="product-category">
                     Accessories
                 </span>
 
-                <h3>Classic Watch</h3>
+                <h3>
+                    Classic Watch
+                </h3>
 
                 <div class="rating">
                     ★★★★★
                 </div>
 
-                <p class="price">$49.99</p>
+                <p class="price">
+                    $49.99
+                </p>
 
                 <div class="product-actions">
 
@@ -153,15 +246,18 @@
                         class="wishlist-btn"
                         type="button"
                         data-name="Classic Watch"
+                        aria-label="Add Classic Watch to wishlist"
                     >
                         <i class="fa-regular fa-heart"></i>
                     </button>
 
                     <button
                         class="add-cart"
+                        type="button"
                         data-name="Classic Watch"
                         data-price="49.99"
                     >
+                        <i class="fa-solid fa-bag-shopping"></i>
                         Add to Cart
                     </button>
 
@@ -172,6 +268,7 @@
                     class="view-product"
                 >
                     View Details
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
             </div>
@@ -181,22 +278,30 @@
 
             <div class="product-card">
 
-                <img
-                    src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
-                    alt="Fashion T-Shirt"
-                >
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
+                        alt="Fashion T-Shirt"
+                    >
+
+                </div>
 
                 <span class="product-category">
                     Clothing
                 </span>
 
-                <h3>Fashion T-Shirt</h3>
+                <h3>
+                    Fashion T-Shirt
+                </h3>
 
                 <div class="rating">
                     ★★★★★
                 </div>
 
-                <p class="price">$24.99</p>
+                <p class="price">
+                    $24.99
+                </p>
 
                 <div class="product-actions">
 
@@ -204,15 +309,18 @@
                         class="wishlist-btn"
                         type="button"
                         data-name="Fashion T-Shirt"
+                        aria-label="Add Fashion T-Shirt to wishlist"
                     >
                         <i class="fa-regular fa-heart"></i>
                     </button>
 
                     <button
                         class="add-cart"
+                        type="button"
                         data-name="Fashion T-Shirt"
                         data-price="24.99"
                     >
+                        <i class="fa-solid fa-bag-shopping"></i>
                         Add to Cart
                     </button>
 
@@ -223,6 +331,7 @@
                     class="view-product"
                 >
                     View Details
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
             </div>
@@ -232,22 +341,30 @@
 
             <div class="product-card">
 
-                <img
-                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
-                    alt="Running Shoes"
-                >
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+                        alt="Running Shoes"
+                    >
+
+                </div>
 
                 <span class="product-category">
                     Footwear
                 </span>
 
-                <h3>Running Shoes</h3>
+                <h3>
+                    Running Shoes
+                </h3>
 
                 <div class="rating">
                     ★★★★★
                 </div>
 
-                <p class="price">$69.99</p>
+                <p class="price">
+                    $69.99
+                </p>
 
                 <div class="product-actions">
 
@@ -255,15 +372,18 @@
                         class="wishlist-btn"
                         type="button"
                         data-name="Running Shoes"
+                        aria-label="Add Running Shoes to wishlist"
                     >
                         <i class="fa-regular fa-heart"></i>
                     </button>
 
                     <button
                         class="add-cart"
+                        type="button"
                         data-name="Running Shoes"
                         data-price="69.99"
                     >
+                        <i class="fa-solid fa-bag-shopping"></i>
                         Add to Cart
                     </button>
 
@@ -274,6 +394,7 @@
                     class="view-product"
                 >
                     View Details
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
             </div>
@@ -283,22 +404,30 @@
 
             <div class="product-card">
 
-                <img
-                    src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
-                    alt="Wireless Headphones"
-                >
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+                        alt="Wireless Headphones"
+                    >
+
+                </div>
 
                 <span class="product-category">
                     Electronics
                 </span>
 
-                <h3>Wireless Headphones</h3>
+                <h3>
+                    Wireless Headphones
+                </h3>
 
                 <div class="rating">
                     ★★★★★
                 </div>
 
-                <p class="price">$89.99</p>
+                <p class="price">
+                    $89.99
+                </p>
 
                 <div class="product-actions">
 
@@ -306,15 +435,18 @@
                         class="wishlist-btn"
                         type="button"
                         data-name="Wireless Headphones"
+                        aria-label="Add Wireless Headphones to wishlist"
                     >
                         <i class="fa-regular fa-heart"></i>
                     </button>
 
                     <button
                         class="add-cart"
+                        type="button"
                         data-name="Wireless Headphones"
                         data-price="89.99"
                     >
+                        <i class="fa-solid fa-bag-shopping"></i>
                         Add to Cart
                     </button>
 
@@ -325,6 +457,7 @@
                     class="view-product"
                 >
                     View Details
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
             </div>
@@ -334,22 +467,30 @@
 
             <div class="product-card">
 
-                <img
-                    src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=600&q=80"
-                    alt="Premium Coffee Mug"
-                >
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=600&q=80"
+                        alt="Premium Coffee Mug"
+                    >
+
+                </div>
 
                 <span class="product-category">
                     Home
                 </span>
 
-                <h3>Premium Coffee Mug</h3>
+                <h3>
+                    Premium Coffee Mug
+                </h3>
 
                 <div class="rating">
                     ★★★★★
                 </div>
 
-                <p class="price">$14.99</p>
+                <p class="price">
+                    $14.99
+                </p>
 
                 <div class="product-actions">
 
@@ -357,15 +498,18 @@
                         class="wishlist-btn"
                         type="button"
                         data-name="Premium Coffee Mug"
+                        aria-label="Add Premium Coffee Mug to wishlist"
                     >
                         <i class="fa-regular fa-heart"></i>
                     </button>
 
                     <button
                         class="add-cart"
+                        type="button"
                         data-name="Premium Coffee Mug"
                         data-price="14.99"
                     >
+                        <i class="fa-solid fa-bag-shopping"></i>
                         Add to Cart
                     </button>
 
@@ -376,6 +520,7 @@
                     class="view-product"
                 >
                     View Details
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
             </div>
@@ -385,22 +530,30 @@
 
             <div class="product-card">
 
-                <img
-                    src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
-                    alt="Leather Bag"
-                >
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+                        alt="Leather Bag"
+                    >
+
+                </div>
 
                 <span class="product-category">
                     Bags
                 </span>
 
-                <h3>Leather Bag</h3>
+                <h3>
+                    Leather Bag
+                </h3>
 
                 <div class="rating">
                     ★★★★★
                 </div>
 
-                <p class="price">$79.99</p>
+                <p class="price">
+                    $79.99
+                </p>
 
                 <div class="product-actions">
 
@@ -408,15 +561,18 @@
                         class="wishlist-btn"
                         type="button"
                         data-name="Leather Bag"
+                        aria-label="Add Leather Bag to wishlist"
                     >
                         <i class="fa-regular fa-heart"></i>
                     </button>
 
                     <button
                         class="add-cart"
+                        type="button"
                         data-name="Leather Bag"
                         data-price="79.99"
                     >
+                        <i class="fa-solid fa-bag-shopping"></i>
                         Add to Cart
                     </button>
 
@@ -427,9 +583,30 @@
                     class="view-product"
                 >
                     View Details
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
             </div>
+
+        </div>
+
+
+        <!-- NO PRODUCTS MESSAGE -->
+
+        <div
+            id="no-products"
+            class="no-products"
+        >
+
+            <i class="fa-solid fa-box-open"></i>
+
+            <h3>
+                No products found
+            </h3>
+
+            <p>
+                Try another search or category.
+            </p>
 
         </div>
 
@@ -438,13 +615,61 @@
 </main>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer class="footer">
 
     <div class="container">
 
-        <p>
-            © 2026 ShopEase. All Rights Reserved.
-        </p>
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    NovaShop
+                </a>
+
+                <p>
+                    Quality products. Simple shopping.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="blog.html">
+                    Blog
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 NovaShop. All Rights Reserved.
+            </p>
+
+        </div>
 
     </div>
 
