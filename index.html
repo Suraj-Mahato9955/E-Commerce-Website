@@ -7,7 +7,8 @@
 
     <title>NovaShop - Modern E-Commerce</title>
 
-    <!-- Google Font -->
+    <link rel="stylesheet" href="css/style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -16,15 +17,12 @@
         rel="stylesheet"
     >
 
-    <!-- Font Awesome -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
 </head>
+
 
 <body>
 
@@ -34,59 +32,41 @@
 
         <div class="nav">
 
-            <!-- Logo -->
             <a href="index.html" class="logo">
                 NovaShop
             </a>
 
-            <!-- Navigation -->
             <nav>
-
-                <a class="active" href="index.html">
-                    Home
-                </a>
-
-                <a href="shop.html">
-                    Shop
-                </a>
-
-                <a href="about.html">
-                    About
-                </a>
-
-                <a href="blog.html">
-                    Blog
-                </a>
-
-                <a href="contact.html">
-                    Contact
-                </a>
-
+                <a href="index.html" class="active">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
             </nav>
 
-            <!-- Right Side -->
             <div class="nav-actions">
 
-                <!-- Wishlist -->
-                <a href="wishlist.html" class="nav-icon" title="Wishlist">
+                <a
+                    href="wishlist.html"
+                    class="nav-icon"
+                    title="Wishlist"
+                >
                     <i class="fa-regular fa-heart"></i>
                 </a>
 
-                <!-- Cart -->
-                <a href="cart.html" class="cart-link" title="Shopping Cart">
-
+                <a
+                    href="cart.html"
+                    class="cart-link"
+                    title="Shopping Cart"
+                >
                     <i class="fa-solid fa-bag-shopping"></i>
-
-                    <span id="cart-count">
-                        0
-                    </span>
-
+                    <span id="cart-count">0</span>
                 </a>
 
-                <!-- Mobile Menu -->
                 <button
                     class="menu-toggle"
                     id="menu-toggle"
+                    type="button"
                     aria-label="Open Menu"
                     aria-expanded="false"
                 >
@@ -102,31 +82,27 @@
 
     <!-- ================= HERO ================= -->
 
-    <section id="hero">
+    <section class="hero">
 
         <div class="hero-content">
 
-            <p class="hero-small">
-                New Collection
+            <p class="hero-subtitle">
+                NEW COLLECTION
             </p>
 
             <h1>
                 Discover Your
-                <br>
-                Style
+                <span>Style</span>
             </h1>
 
-            <p>
-                Explore premium fashion, accessories and
-                everyday essentials designed for modern living.
+            <p class="hero-description">
+                Explore fashion, accessories and everyday essentials
+                designed to make your lifestyle better.
             </p>
 
             <a href="shop.html" class="hero-btn">
-
                 Shop Now
-
                 <i class="fa-solid fa-arrow-right"></i>
-
             </a>
 
         </div>
@@ -136,66 +112,62 @@
 
     <!-- ================= FEATURES ================= -->
 
-    <section id="features" class="section-p1">
+    <section class="features">
 
-        <div class="feature-container">
+        <div class="features-container">
 
             <div class="feature-box">
 
-                <i class="fa-solid fa-truck"></i>
+                <div class="feature-icon">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
 
-                <h3>
-                    Free Shipping
-                </h3>
-
-                <p>
-                    Free shipping on orders above ₹999
-                </p>
+                <div>
+                    <h3>Free Shipping</h3>
+                    <p>On orders above ₹999</p>
+                </div>
 
             </div>
 
 
             <div class="feature-box">
 
-                <i class="fa-solid fa-shield-halved"></i>
+                <div class="feature-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
 
-                <h3>
-                    Secure Payment
-                </h3>
-
-                <p>
-                    Safe and secure payment system
-                </p>
-
-            </div>
-
-
-            <div class="feature-box">
-
-                <i class="fa-solid fa-rotate-left"></i>
-
-                <h3>
-                    Easy Returns
-                </h3>
-
-                <p>
-                    Easy returns within 7 days
-                </p>
+                <div>
+                    <h3>Secure Payment</h3>
+                    <p>100% secure checkout</p>
+                </div>
 
             </div>
 
 
             <div class="feature-box">
 
-                <i class="fa-solid fa-headset"></i>
+                <div class="feature-icon">
+                    <i class="fa-solid fa-rotate-left"></i>
+                </div>
 
-                <h3>
-                    24/7 Support
-                </h3>
+                <div>
+                    <h3>Easy Returns</h3>
+                    <p>7 day easy returns</p>
+                </div>
 
-                <p>
-                    We're always here to help
-                </p>
+            </div>
+
+
+            <div class="feature-box">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+
+                <div>
+                    <h3>Support</h3>
+                    <p>We're here to help</p>
+                </div>
 
             </div>
 
@@ -206,449 +178,461 @@
 
     <!-- ================= PRODUCTS ================= -->
 
-    <section id="products" class="section-p1">
+    <main>
 
-        <div class="section-heading">
+        <section class="products-section">
 
-            <p>
-                Our Collection
-            </p>
+            <div class="section-heading">
 
-            <h2>
-                Featured Products
-            </h2>
-
-            <span>
-                Discover some of our most popular products
-            </span>
-
-        </div>
-
-
-        <div class="product-container">
-
-
-            <!-- Product 1 -->
-
-            <div class="product">
-
-                <div class="product-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
-                        alt="Classic White T-Shirt"
-                    >
-
-                </div>
-
-                <div class="product-info">
-
-                    <p class="product-category">
-                        Men's Fashion
-                    </p>
-
-                    <h3 class="product-name">
-                        Classic White T-Shirt
-                    </h3>
-
-                    <div class="stars">
-
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-
-                    </div>
-
-                    <div class="product-bottom">
-
-                        <span class="product-price">
-                            ₹799
-                        </span>
-
-                        <button
-                            class="add-cart"
-                            data-name="Classic White T-Shirt"
-                            data-price="799"
-                        >
-
-                            <i class="fa-solid fa-cart-shopping"></i>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Product 2 -->
-
-            <div class="product">
-
-                <div class="product-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
-                        alt="Premium Running Shoes"
-                    >
-
-                </div>
-
-                <div class="product-info">
-
-                    <p class="product-category">
-                        Footwear
-                    </p>
-
-                    <h3 class="product-name">
-                        Premium Running Shoes
-                    </h3>
-
-                    <div class="stars">
-
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-
-                    </div>
-
-                    <div class="product-bottom">
-
-                        <span class="product-price">
-                            ₹2,499
-                        </span>
-
-                        <button
-                            class="add-cart"
-                            data-name="Premium Running Shoes"
-                            data-price="2499"
-                        >
-
-                            <i class="fa-solid fa-cart-shopping"></i>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Product 3 -->
-
-            <div class="product">
-
-                <div class="product-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
-                        alt="Smart Watch"
-                    >
-
-                </div>
-
-                <div class="product-info">
-
-                    <p class="product-category">
-                        Accessories
-                    </p>
-
-                    <h3 class="product-name">
-                        Smart Watch
-                    </h3>
-
-                    <div class="stars">
-
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-
-                    </div>
-
-                    <div class="product-bottom">
-
-                        <span class="product-price">
-                            ₹3,999
-                        </span>
-
-                        <button
-                            class="add-cart"
-                            data-name="Smart Watch"
-                            data-price="3999"
-                        >
-
-                            <i class="fa-solid fa-cart-shopping"></i>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Product 4 -->
-
-            <div class="product">
-
-                <div class="product-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
-                        alt="Urban Backpack"
-                    >
-
-                </div>
-
-                <div class="product-info">
-
-                    <p class="product-category">
-                        Bags
-                    </p>
-
-                    <h3 class="product-name">
-                        Urban Backpack
-                    </h3>
-
-                    <div class="stars">
-
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-
-                    </div>
-
-                    <div class="product-bottom">
-
-                        <span class="product-price">
-                            ₹1,299
-                        </span>
-
-                        <button
-                            class="add-cart"
-                            data-name="Urban Backpack"
-                            data-price="1299"
-                        >
-
-                            <i class="fa-solid fa-cart-shopping"></i>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Product 5 -->
-
-            <div class="product">
-
-                <div class="product-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80"
-                        alt="Leather Hand Bag"
-                    >
-
-                </div>
-
-                <div class="product-info">
-
-                    <p class="product-category">
-                        Accessories
-                    </p>
-
-                    <h3 class="product-name">
-                        Leather Hand Bag
-                    </h3>
-
-                    <div class="stars">
-
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-
-                    </div>
-
-                    <div class="product-bottom">
-
-                        <span class="product-price">
-                            ₹1,899
-                        </span>
-
-                        <button
-                            class="add-cart"
-                            data-name="Leather Hand Bag"
-                            data-price="1899"
-                        >
-
-                            <i class="fa-solid fa-cart-shopping"></i>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Product 6 -->
-
-            <div class="product">
-
-                <div class="product-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80"
-                        alt="Classic Sunglasses"
-                    >
-
-                </div>
-
-                <div class="product-info">
-
-                    <p class="product-category">
-                        Eyewear
-                    </p>
-
-                    <h3 class="product-name">
-                        Classic Sunglasses
-                    </h3>
-
-                    <div class="stars">
-
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-
-                    </div>
-
-                    <div class="product-bottom">
-
-                        <span class="product-price">
-                            ₹999
-                        </span>
-
-                        <button
-                            class="add-cart"
-                            data-name="Classic Sunglasses"
-                            data-price="999"
-                        >
-
-                            <i class="fa-solid fa-cart-shopping"></i>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- View All Products -->
-
-        <div class="home-shop-btn">
-
-            <a href="shop.html">
-                View All Products
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= BANNER ================= -->
-
-    <section id="banner">
-
-        <div class="banner-content">
-
-            <p>
-                Special Offer
-            </p>
-
-            <h2>
-                Up to <span>50% Off</span>
-            </h2>
-
-            <p>
-                Limited-time offers on selected products
-            </p>
-
-            <a href="shop.html">
-
-                Explore Deals
-
-                <i class="fa-solid fa-arrow-right"></i>
-
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= NEWSLETTER ================= -->
-
-    <section id="newsletter">
-
-        <div class="newsletter-content">
-
-            <div class="newstext">
-
-                <p>
-                    Stay Updated
+                <p class="section-subtitle">
+                    OUR COLLECTION
                 </p>
 
                 <h2>
-                    Get updates about our
-                    <span>latest products</span>
+                    Featured Products
                 </h2>
+
+                <p>
+                    Explore some of our most popular products.
+                </p>
 
             </div>
 
 
-            <form class="form" id="newsletter-form">
+            <div class="products-grid">
 
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Enter your email address"
-                    required
-                >
 
-                <button type="submit">
-                    Subscribe
-                </button>
+                <!-- Product 1 -->
 
-            </form>
+                <article class="product-card">
 
-        </div>
+                    <div class="product-image">
 
-    </section>
+                        <img
+                            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
+                            alt="Classic White T-Shirt"
+                        >
+
+                        <span class="product-badge">
+                            Popular
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Clothing
+                        </p>
+
+                        <h3>
+                            Classic White T-Shirt
+                        </h3>
+
+                        <div class="rating">
+
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                        </div>
+
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                ₹799
+                            </span>
+
+                            <button
+                                class="add-cart"
+                                data-name="Classic White T-Shirt"
+                                data-price="799"
+                            >
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Product 2 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+                            alt="Premium Running Shoes"
+                        >
+
+                        <span class="product-badge">
+                            Trending
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Footwear
+                        </p>
+
+                        <h3>
+                            Premium Running Shoes
+                        </h3>
+
+                        <div class="rating">
+
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+
+                        </div>
+
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                ₹2,499
+                            </span>
+
+                            <button
+                                class="add-cart"
+                                data-name="Premium Running Shoes"
+                                data-price="2499"
+                            >
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Product 3 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
+                            alt="Smart Watch"
+                        >
+
+                        <span class="product-badge">
+                            New
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Electronics
+                        </p>
+
+                        <h3>
+                            Smart Watch
+                        </h3>
+
+                        <div class="rating">
+
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                        </div>
+
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                ₹3,999
+                            </span>
+
+                            <button
+                                class="add-cart"
+                                data-name="Smart Watch"
+                                data-price="3999"
+                            >
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Product 4 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+                            alt="Urban Backpack"
+                        >
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Bags
+                        </p>
+
+                        <h3>
+                            Urban Backpack
+                        </h3>
+
+                        <div class="rating">
+
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+
+                        </div>
+
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                ₹1,299
+                            </span>
+
+                            <button
+                                class="add-cart"
+                                data-name="Urban Backpack"
+                                data-price="1299"
+                            >
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Product 5 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80"
+                            alt="Leather Hand Bag"
+                        >
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Accessories
+                        </p>
+
+                        <h3>
+                            Leather Hand Bag
+                        </h3>
+
+                        <div class="rating">
+
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                        </div>
+
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                ₹1,899
+                            </span>
+
+                            <button
+                                class="add-cart"
+                                data-name="Leather Hand Bag"
+                                data-price="1899"
+                            >
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Product 6 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80"
+                            alt="Classic Sunglasses"
+                        >
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Accessories
+                        </p>
+
+                        <h3>
+                            Classic Sunglasses
+                        </h3>
+
+                        <div class="rating">
+
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+
+                        </div>
+
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                ₹999
+                            </span>
+
+                            <button
+                                class="add-cart"
+                                data-name="Classic Sunglasses"
+                                data-price="999"
+                            >
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="products-more">
+
+                <a href="shop.html" class="secondary-btn">
+                    View All Products
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= OFFER BANNER ================= -->
+
+        <section class="home-banner">
+
+            <div class="banner-content">
+
+                <p class="section-subtitle">
+                    LIMITED TIME OFFER
+                </p>
+
+                <h2>
+                    Upgrade Your Style
+                    <span>Up to 50% Off</span>
+                </h2>
+
+                <p>
+                    Discover selected products at special prices.
+                </p>
+
+                <a href="shop.html" class="hero-btn">
+                    Explore Deals
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= NEWSLETTER ================= -->
+
+        <section class="newsletter" id="newsletter">
+
+            <div class="newsletter-content">
+
+                <p class="section-subtitle">
+                    STAY UPDATED
+                </p>
+
+                <h2>
+                    Get the latest from NovaShop
+                </h2>
+
+                <p>
+                    Subscribe for new products, shopping tips
+                    and exclusive updates.
+                </p>
+
+
+                <form id="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email address"
+                        required
+                    >
+
+                    <button type="submit">
+                        Subscribe
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
 
 
     <!-- ================= FOOTER ================= -->
@@ -657,36 +641,29 @@
 
         <div class="footer-container">
 
+            <div class="footer-box">
 
-            <!-- Brand -->
-
-            <div class="footer-column">
-
-                <a href="index.html" class="footer-logo">
+                <h2>
                     NovaShop
-                </a>
+                </h2>
 
                 <p>
-                    Your one-stop destination for
-                    fashion, accessories and lifestyle products.
+                    Discover quality products, modern style
+                    and a seamless shopping experience.
                 </p>
 
                 <div class="social-icons">
 
-                    <a href="#">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-
-                    <a href="#">
+                    <a href="#" aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
 
-                    <a href="#">
-                        <i class="fa-brands fa-twitter"></i>
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
                     </a>
 
-                    <a href="#">
-                        <i class="fa-brands fa-linkedin-in"></i>
+                    <a href="#" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
                     </a>
 
                 </div>
@@ -694,89 +671,37 @@
             </div>
 
 
-            <!-- Quick Links -->
-
-            <div class="footer-column">
+            <div class="footer-box">
 
                 <h3>
                     Quick Links
                 </h3>
 
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="shop.html">
-                    Shop
-                </a>
-
-                <a href="about.html">
-                    About Us
-                </a>
-
-                <a href="blog.html">
-                    Blog
-                </a>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
 
             </div>
 
 
-            <!-- Customer Service -->
-
-            <div class="footer-column">
+            <div class="footer-box">
 
                 <h3>
-                    Customer Service
+                    Customer Care
                 </h3>
 
-                <a href="wishlist.html">
-                    Wishlist
-                </a>
-
-                <a href="cart.html">
-                    Shopping Cart
-                </a>
-
-                <a href="contact.html">
-                    Contact Support
-                </a>
-
-                <a href="about.html">
-                    Return Policy
-                </a>
-
-            </div>
-
-
-            <!-- Contact -->
-
-            <div class="footer-column">
-
-                <h3>
-                    Contact Us
-                </h3>
-
-                <p>
-                    <i class="fa-solid fa-location-dot"></i>
-                    India
-                </p>
-
-                <p>
-                    <i class="fa-solid fa-phone"></i>
-                    +91 98765 43210
-                </p>
-
-                <p>
-                    <i class="fa-solid fa-envelope"></i>
-                    support@novashop.com
-                </p>
+                <a href="contact.html">Contact Us</a>
+                <a href="cart.html">Shopping Cart</a>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="checkout.html">Checkout</a>
 
             </div>
 
         </div>
 
 
-        <div class="copyright">
+        <div class="footer-bottom">
 
             <p>
                 © 2026 NovaShop. All Rights Reserved.
@@ -787,7 +712,6 @@
     </footer>
 
 
-    <!-- JavaScript -->
     <script src="js/script.js"></script>
 
 </body>
