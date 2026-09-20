@@ -1,29 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Cart - ShopEase</title>
+    <title>Shopping Cart - NovaShop</title>
 
     <link rel="stylesheet" href="css/style.css">
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -34,380 +20,227 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
-
-    <style>
-
-        .cart-page {
-            padding: 60px 0;
-            min-height: 70vh;
-        }
-
-        .cart-heading {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .cart-heading h1 {
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
-
-        .cart-heading p {
-            color: #aaa;
-        }
-
-        .cart-layout {
-            display: grid;
-            grid-template-columns: 1fr 350px;
-            gap: 30px;
-            align-items: start;
-        }
-
-        #cart-container {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .cart-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            padding: 20px;
-            background: #171a20;
-            border: 1px solid #2a2e36;
-            border-radius: 10px;
-        }
-
-        .cart-item-info {
-            flex: 1;
-        }
-
-        .cart-item-info h3 {
-            margin-bottom: 8px;
-        }
-
-        .cart-item-info p {
-            color: #00c9a7;
-            font-weight: 600;
-        }
-
-        .cart-quantity {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .quantity-btn {
-            width: 34px;
-            height: 34px;
-            border: 1px solid #2a2e36;
-            border-radius: 6px;
-            background: #0f1115;
-            color: #fff;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .quantity-btn:hover {
-            border-color: #00c9a7;
-            color: #00c9a7;
-        }
-
-        .quantity-value {
-            min-width: 25px;
-            text-align: center;
-            font-weight: 600;
-        }
-
-        .cart-item-total {
-            min-width: 80px;
-            text-align: right;
-            font-weight: 600;
-        }
-
-        .remove-cart {
-            width: 38px;
-            height: 38px;
-            border: none;
-            border-radius: 6px;
-            background: transparent;
-            color: #ff4d6d;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .remove-cart:hover {
-            background: rgba(255, 77, 109, 0.1);
-        }
-
-        .cart-summary {
-            padding: 25px;
-            background: #171a20;
-            border: 1px solid #2a2e36;
-            border-radius: 10px;
-        }
-
-        .cart-summary h2 {
-            margin-bottom: 20px;
-        }
-
-        .summary-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-            color: #bbb;
-        }
-
-        .summary-total {
-            display: flex;
-            justify-content: space-between;
-            padding-top: 15px;
-            margin-top: 15px;
-            border-top: 1px solid #2a2e36;
-            font-size: 20px;
-            font-weight: 700;
-        }
-
-        .checkout-btn {
-            display: block;
-            width: 100%;
-            margin-top: 25px;
-            padding: 14px;
-            border: none;
-            border-radius: 8px;
-            background: #00c9a7;
-            color: #111;
-            text-align: center;
-            text-decoration: none;
-            font-family: inherit;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        .checkout-btn:hover {
-            opacity: 0.9;
-        }
-
-        .empty-cart {
-            padding: 60px 20px;
-            text-align: center;
-            background: #171a20;
-            border: 1px solid #2a2e36;
-            border-radius: 10px;
-        }
-
-        .empty-cart i {
-            font-size: 50px;
-            color: #00c9a7;
-            margin-bottom: 20px;
-        }
-
-        .empty-cart h2 {
-            margin-bottom: 10px;
-        }
-
-        .empty-cart p {
-            color: #aaa;
-            margin-bottom: 25px;
-        }
-
-        .empty-cart .btn {
-            display: inline-block;
-            padding: 12px 20px;
-            border-radius: 8px;
-            background: #00c9a7;
-            color: #111;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        @media (max-width: 800px) {
-
-            .cart-layout {
-                grid-template-columns: 1fr;
-            }
-
-        }
-
-        @media (max-width: 600px) {
-
-            .cart-item {
-                flex-wrap: wrap;
-            }
-
-            .cart-item-info {
-                width: 100%;
-                flex: none;
-            }
-
-            .cart-quantity {
-                order: 2;
-            }
-
-            .cart-item-total {
-                order: 3;
-            }
-
-            .remove-cart {
-                order: 4;
-            }
-
-        }
-
-    </style>
-
 </head>
-
 
 <body>
 
+    <!-- Header -->
+    <header id="header">
+        <div class="nav">
 
-<header class="header">
+            <a href="index.html" class="logo">NovaShop</a>
 
-    <div class="container nav">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
 
-        <a href="index.html" class="logo">
-            Shop<span>Ease</span>
-        </a>
+            <div class="nav-actions">
 
-        <nav>
+                <a
+                    href="wishlist.html"
+                    class="nav-icon"
+                    title="Wishlist"
+                >
+                    <i class="fa-regular fa-heart"></i>
+                </a>
 
-            <a href="index.html">Home</a>
+                <a
+                    href="cart.html"
+                    class="cart-link"
+                    title="Shopping Cart"
+                >
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-count">0</span>
+                </a>
 
-            <a href="shop.html">Shop</a>
+                <button
+                    class="menu-toggle"
+                    id="menu-toggle"
+                    type="button"
+                    aria-label="Open Menu"
+                    aria-expanded="false"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
 
-            <a href="index.html#features">
-                Features
-            </a>
+            </div>
 
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </nav>
-
-        <a href="cart.html" class="cart-link">
-
-            <i class="fa-solid fa-cart-shopping"></i>
-
-            <span id="cart-count">0</span>
-
-        </a>
-
-    </div>
-
-</header>
+        </div>
+    </header>
 
 
-<main class="cart-page">
+    <!-- Cart -->
+    <main>
 
-    <div class="container">
+        <section class="cart-page">
 
-        <div class="cart-heading">
+            <div class="section-heading">
 
-            <h1>Your Shopping Cart</h1>
+                <p class="section-subtitle">YOUR SHOPPING BAG</p>
+
+                <h1>Shopping Cart</h1>
+
+                <p>
+                    Review your selected products before proceeding
+                    to checkout.
+                </p>
+
+            </div>
+
+
+            <div class="cart-layout">
+
+                <!-- Cart Products -->
+                <div class="cart-products">
+
+                    <div id="cart-container">
+                        <!-- Cart items will be loaded by JavaScript -->
+                    </div>
+
+                </div>
+
+
+                <!-- Cart Summary -->
+                <aside class="cart-summary">
+
+                    <h2>Order Summary</h2>
+
+                    <div class="summary-row">
+
+                        <span>Subtotal</span>
+
+                        <span id="cart-subtotal">
+                            $0.00
+                        </span>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>Shipping</span>
+
+                        <span id="cart-shipping">
+                            $0.00
+                        </span>
+
+                    </div>
+
+
+                    <div class="summary-divider"></div>
+
+
+                    <div class="summary-row total-row">
+
+                        <span>Total</span>
+
+                        <strong id="cart-total">
+                            $0.00
+                        </strong>
+
+                    </div>
+
+
+                    <a
+                        href="checkout.html"
+                        class="checkout-btn"
+                    >
+                        Proceed to Checkout
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+
+                    <a
+                        href="shop.html"
+                        class="continue-shopping"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Continue Shopping
+                    </a>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-box">
+
+                <h2>NovaShop</h2>
+
+                <p>
+                    Discover quality products, modern style
+                    and a seamless shopping experience.
+                </p>
+
+                <div class="social-icons">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-box">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+
+            </div>
+
+
+            <div class="footer-box">
+
+                <h3>Customer Care</h3>
+
+                <a href="contact.html">Contact Us</a>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="checkout.html">Checkout</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
 
             <p>
-                Review your products before checkout.
+                © 2026 NovaShop. All Rights Reserved.
             </p>
 
         </div>
 
-
-        <div class="cart-layout">
-
-
-            <!-- CART ITEMS -->
-
-            <div id="cart-container">
-
-                <!-- JavaScript will load cart -->
-
-            </div>
+    </footer>
 
 
-            <!-- CART SUMMARY -->
-
-            <div class="cart-summary">
-
-                <h2>
-                    Order Summary
-                </h2>
-
-
-                <div class="summary-row">
-
-                    <span>
-                        Subtotal
-                    </span>
-
-                    <span id="cart-subtotal">
-                        $0.00
-                    </span>
-
-                </div>
-
-
-                <div class="summary-row">
-
-                    <span>
-                        Shipping
-                    </span>
-
-                    <span id="cart-shipping">
-                        $0.00
-                    </span>
-
-                </div>
-
-
-                <div class="summary-total">
-
-                    <span>
-                        Total
-                    </span>
-
-                    <span id="cart-total">
-                        $0.00
-                    </span>
-
-                </div>
-
-
-                <a
-                    href="checkout.html"
-                    class="checkout-btn"
-                    id="checkout-link"
-                >
-                    Proceed to Checkout
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</main>
-
-
-<footer class="footer">
-
-    <div class="container">
-
-        <p>
-            © 2026 ShopEase. All Rights Reserved.
-        </p>
-
-    </div>
-
-</footer>
-
-
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
-
 </html>
