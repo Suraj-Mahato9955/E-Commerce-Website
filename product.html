@@ -1,30 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Product - ShopEase</title>
+    <title>Product - NovaShop</title>
 
     <link rel="stylesheet" href="css/style.css">
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -35,215 +20,146 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
-
-    <style>
-
-        .product-details-page {
-            padding: 70px 0;
-            min-height: 70vh;
-        }
-
-        .product-details {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .product-details-image {
-            background: #171a20;
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        .product-details-image img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .product-details-info h1 {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
-
-        .product-details-info .details-category {
-            display: inline-block;
-            color: #00c9a7;
-            margin-bottom: 15px;
-            font-weight: 500;
-        }
-
-        .product-details-info .details-rating {
-            color: #ffc107;
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-
-        .product-details-info .details-price {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .product-description {
-            color: #aaa;
-            line-height: 1.8;
-            margin-bottom: 30px;
-        }
-
-        .details-actions {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-
-        .details-cart-btn {
-            padding: 14px 25px;
-            border: none;
-            border-radius: 8px;
-            background: #00c9a7;
-            color: #111;
-            font-family: inherit;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .details-cart-btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .details-wishlist-btn {
-            width: 48px;
-            height: 48px;
-            border: 1px solid #2a2e36;
-            border-radius: 8px;
-            background: #171a20;
-            color: #aaa;
-            cursor: pointer;
-            font-size: 18px;
-        }
-
-        .details-wishlist-btn.active {
-            color: #ff4d6d;
-            border-color: #ff4d6d;
-        }
-
-        .back-shop {
-            display: inline-block;
-            margin-bottom: 30px;
-            color: #00c9a7;
-            text-decoration: none;
-        }
-
-        @media (max-width: 768px) {
-
-            .product-details {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .product-details-image img {
-                height: 350px;
-            }
-
-            .product-details-info h1 {
-                font-size: 30px;
-            }
-
-        }
-
-    </style>
-
 </head>
-
 
 <body>
 
+    <!-- Header -->
+    <header id="header">
+        <div class="nav">
 
-<header class="header">
+            <a href="index.html" class="logo">NovaShop</a>
 
-    <div class="container nav">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
 
-        <a href="index.html" class="logo">
-            Shop<span>Ease</span>
-        </a>
+            <div class="nav-actions">
 
-        <nav>
+                <a
+                    href="wishlist.html"
+                    class="nav-icon"
+                    title="Wishlist"
+                >
+                    <i class="fa-regular fa-heart"></i>
+                </a>
 
-            <a href="index.html">Home</a>
+                <a
+                    href="cart.html"
+                    class="cart-link"
+                    title="Shopping Cart"
+                >
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-count">0</span>
+                </a>
 
-            <a href="shop.html">Shop</a>
+                <button
+                    class="menu-toggle"
+                    id="menu-toggle"
+                    type="button"
+                    aria-label="Open Menu"
+                    aria-expanded="false"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
 
-            <a href="index.html#features">
-                Features
-            </a>
+            </div>
 
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </nav>
-
-        <a href="cart.html" class="cart-link">
-
-            <i class="fa-solid fa-cart-shopping"></i>
-
-            <span id="cart-count">
-                0
-            </span>
-
-        </a>
-
-    </div>
-
-</header>
-
-
-<main class="product-details-page">
-
-    <div class="container">
-
-        <a
-            href="shop.html"
-            class="back-shop"
-        >
-            <i class="fa-solid fa-arrow-left"></i>
-            Back to Shop
-        </a>
+        </div>
+    </header>
 
 
-        <div
-            class="product-details"
-            id="product-details"
-        >
+    <!-- Product Details -->
+    <main>
 
-            <!-- JavaScript will load product -->
+        <section class="product-details-section">
+
+            <div id="product-details" class="product-details">
+
+                <!-- Product will be loaded by JavaScript -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-box">
+
+                <h2>NovaShop</h2>
+
+                <p>
+                    Discover quality products, modern style
+                    and a seamless shopping experience.
+                </p>
+
+                <div class="social-icons">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-box">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+
+            </div>
+
+
+            <div class="footer-box">
+
+                <h3>Customer Care</h3>
+
+                <a href="contact.html">Contact Us</a>
+                <a href="cart.html">Shopping Cart</a>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="checkout.html">Checkout</a>
+
+            </div>
 
         </div>
 
-    </div>
 
-</main>
+        <div class="footer-bottom">
 
+            <p>
+                © 2026 NovaShop. All Rights Reserved.
+            </p>
 
-<footer class="footer">
+        </div>
 
-    <div class="container">
-
-        <p>
-            © 2026 ShopEase. All Rights Reserved.
-        </p>
-
-    </div>
-
-</footer>
+    </footer>
 
 
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
-
 </html>
