@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,15 +21,350 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
+
+    <style>
+        /* ========================================
+           CONTACT PAGE
+        ======================================== */
+
+        .contact-page {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 24px;
+            box-sizing: border-box;
+        }
+
+        .contact-page > .section-heading {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 60px;
+        }
+
+        .contact-page .section-subtitle,
+        .faq-section .section-subtitle {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            opacity: 0.7;
+        }
+
+        .contact-page .section-heading h1 {
+            font-size: 44px;
+            line-height: 1.2;
+            margin: 0 0 15px;
+        }
+
+        .contact-page .section-heading > p:last-child {
+            font-size: 15px;
+            line-height: 1.8;
+            opacity: 0.7;
+            margin: 0;
+        }
+
+
+        /* ========================================
+           CONTACT LAYOUT
+        ======================================== */
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+
+        /* ========================================
+           CONTACT INFORMATION
+        ======================================== */
+
+        .contact-info {
+            padding: 10px 0;
+        }
+
+        .contact-info-header {
+            margin-bottom: 35px;
+        }
+
+        .contact-info-header .section-subtitle {
+            margin-bottom: 10px;
+        }
+
+        .contact-info-header h2 {
+            font-size: 30px;
+            line-height: 1.35;
+            margin: 0 0 15px;
+        }
+
+        .contact-info-header > p:last-child {
+            font-size: 14px;
+            line-height: 1.8;
+            opacity: 0.65;
+            margin: 0;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-bottom: 28px;
+        }
+
+        .contact-icon {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: rgba(0, 212, 170, 0.08);
+            font-size: 17px;
+        }
+
+        .contact-info-item h3 {
+            margin: 0 0 5px;
+            font-size: 16px;
+        }
+
+        .contact-info-item p {
+            margin: 0;
+            font-size: 13px;
+            line-height: 1.7;
+            opacity: 0.65;
+        }
+
+
+        /* ========================================
+           CONTACT FORM
+        ======================================== */
+
+        .contact-form-container {
+            padding: 35px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        #contact-form {
+            width: 100%;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            outline: none;
+            padding: 13px 14px;
+            background: rgba(255, 255, 255, 0.035);
+            color: inherit;
+            font-family: inherit;
+            font-size: 13px;
+            transition: border-color 0.25s ease;
+        }
+
+        .form-group input {
+            height: 48px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: rgba(0, 212, 170, 0.6);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            opacity: 0.45;
+        }
+
+        .contact-submit-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            min-height: 48px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            background: #00d4aa;
+            color: #06100e;
+            transition: transform 0.25s ease, opacity 0.25s ease;
+        }
+
+        .contact-submit-btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+
+        /* ========================================
+           FAQ
+        ======================================== */
+
+        .faq-section {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 24px 90px;
+            box-sizing: border-box;
+        }
+
+        .faq-section > .section-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .faq-section h2 {
+            font-size: 34px;
+            margin: 0;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .faq-item {
+            padding: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.02);
+            transition: transform 0.25s ease, border-color 0.25s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-4px);
+            border-color: rgba(0, 212, 170, 0.3);
+        }
+
+        .faq-item h3 {
+            font-size: 16px;
+            margin: 0 0 10px;
+        }
+
+        .faq-item p {
+            font-size: 13px;
+            line-height: 1.75;
+            opacity: 0.65;
+            margin: 0;
+        }
+
+
+        /* ========================================
+           TABLET
+        ======================================== */
+
+        @media (max-width: 900px) {
+
+            .contact-layout {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .contact-info {
+                max-width: 700px;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+
+        /* ========================================
+           MOBILE
+        ======================================== */
+
+        @media (max-width: 600px) {
+
+            .contact-page {
+                padding: 55px 18px;
+            }
+
+            .contact-page > .section-heading {
+                margin-bottom: 40px;
+            }
+
+            .contact-page .section-heading h1 {
+                font-size: 32px;
+            }
+
+            .contact-info-header h2 {
+                font-size: 26px;
+            }
+
+            .contact-form-container {
+                padding: 24px 18px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .faq-section {
+                padding: 10px 18px 60px;
+            }
+
+            .faq-section h2 {
+                font-size: 28px;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-item {
+                padding: 23px 20px;
+            }
+        }
+    </style>
 </head>
+
 
 <body>
 
-    <!-- Header -->
+    <!-- ================= HEADER ================= -->
+
     <header id="header">
+
         <div class="nav">
 
-            <a href="index.html" class="logo">NovaShop</a>
+            <a href="index.html" class="logo">
+                NovaShop
+            </a>
 
             <nav>
                 <a href="index.html">Home</a>
@@ -40,11 +376,19 @@
 
             <div class="nav-actions">
 
-                <a href="wishlist.html" class="nav-icon" title="Wishlist">
+                <a
+                    href="wishlist.html"
+                    class="nav-icon"
+                    title="Wishlist"
+                >
                     <i class="fa-regular fa-heart"></i>
                 </a>
 
-                <a href="cart.html" class="cart-link" title="Shopping Cart">
+                <a
+                    href="cart.html"
+                    class="cart-link"
+                    title="Shopping Cart"
+                >
                     <i class="fa-solid fa-bag-shopping"></i>
                     <span id="cart-count">0</span>
                 </a>
@@ -62,19 +406,25 @@
             </div>
 
         </div>
+
     </header>
 
 
-    <!-- Contact -->
+    <!-- ================= CONTACT ================= -->
+
     <main>
 
         <section class="contact-page">
 
             <div class="section-heading">
 
-                <p class="section-subtitle">GET IN TOUCH</p>
+                <p class="section-subtitle">
+                    GET IN TOUCH
+                </p>
 
-                <h1>Contact Us</h1>
+                <h1>
+                    Contact Us
+                </h1>
 
                 <p>
                     Have a question, suggestion or need help?
@@ -87,6 +437,7 @@
             <div class="contact-layout">
 
                 <!-- Contact Information -->
+
                 <div class="contact-info">
 
                     <div class="contact-info-header">
@@ -115,11 +466,15 @@
                         </div>
 
                         <div>
-                            <h3>Email</h3>
+
+                            <h3>
+                                Email
+                            </h3>
 
                             <p>
                                 support@novashop.com
                             </p>
+
                         </div>
 
                     </div>
@@ -132,11 +487,15 @@
                         </div>
 
                         <div>
-                            <h3>Phone</h3>
+
+                            <h3>
+                                Phone
+                            </h3>
 
                             <p>
                                 +91 98765 43210
                             </p>
+
                         </div>
 
                     </div>
@@ -149,12 +508,16 @@
                         </div>
 
                         <div>
-                            <h3>Address</h3>
+
+                            <h3>
+                                Address
+                            </h3>
 
                             <p>
                                 NovaShop Business Center<br>
                                 India
                             </p>
+
                         </div>
 
                     </div>
@@ -167,12 +530,16 @@
                         </div>
 
                         <div>
-                            <h3>Working Hours</h3>
+
+                            <h3>
+                                Working Hours
+                            </h3>
 
                             <p>
                                 Monday - Saturday<br>
                                 9:00 AM - 6:00 PM
                             </p>
+
                         </div>
 
                     </div>
@@ -181,6 +548,7 @@
 
 
                 <!-- Contact Form -->
+
                 <div class="contact-form-container">
 
                     <form id="contact-form">
@@ -276,14 +644,19 @@
     </main>
 
 
-    <!-- FAQ -->
+    <!-- ================= FAQ ================= -->
+
     <section class="faq-section">
 
         <div class="section-heading">
 
-            <p class="section-subtitle">FAQ</p>
+            <p class="section-subtitle">
+                FAQ
+            </p>
 
-            <h2>Frequently Asked Questions</h2>
+            <h2>
+                Frequently Asked Questions
+            </h2>
 
         </div>
 
@@ -351,14 +724,17 @@
     </section>
 
 
-    <!-- Footer -->
+    <!-- ================= FOOTER ================= -->
+
     <footer>
 
         <div class="footer-container">
 
             <div class="footer-box">
 
-                <h2>NovaShop</h2>
+                <h2>
+                    NovaShop
+                </h2>
 
                 <p>
                     Discover quality products, modern style
@@ -386,7 +762,9 @@
 
             <div class="footer-box">
 
-                <h3>Quick Links</h3>
+                <h3>
+                    Quick Links
+                </h3>
 
                 <a href="index.html">Home</a>
                 <a href="shop.html">Shop</a>
@@ -398,7 +776,9 @@
 
             <div class="footer-box">
 
-                <h3>Customer Care</h3>
+                <h3>
+                    Customer Care
+                </h3>
 
                 <a href="contact.html">Contact Us</a>
                 <a href="cart.html">Shopping Cart</a>
@@ -424,4 +804,5 @@
     <script src="js/script.js"></script>
 
 </body>
+
 </html>
