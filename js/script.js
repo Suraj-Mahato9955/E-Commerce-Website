@@ -1,101 +1,105 @@
-// =========================
+// =========================================================
+// NOVASHOP - COMPLETE JAVASCRIPT
+// =========================================================
+
+
+// =========================================================
 // PRODUCT DATA
-// =========================
+// =========================================================
 
 const products = {
-
     "Classic Watch": {
         category: "Accessories",
         price: 49.99,
         image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=800&q=80",
-        description: "A stylish classic watch designed for everyday use. Its simple and elegant design makes it perfect for both casual and formal occasions."
+        description:
+            "A stylish classic watch designed for everyday use. Its simple and elegant design makes it perfect for both casual and formal occasions."
     },
 
     "Fashion T-Shirt": {
         category: "Clothing",
         price: 24.99,
         image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-        description: "A comfortable and stylish fashion T-shirt made for everyday wear. Perfect for creating a simple and modern look."
+        description:
+            "A comfortable and stylish fashion T-shirt made for everyday wear. Perfect for creating a simple and modern look."
     },
 
     "Running Shoes": {
         category: "Footwear",
         price: 69.99,
         image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80",
-        description: "Comfortable running shoes designed to provide support during workouts, running and everyday activities."
+        description:
+            "Comfortable running shoes designed to provide support during workouts, running and everyday activities."
     },
 
     "Wireless Headphones": {
         category: "Electronics",
         price: 89.99,
         image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
-        description: "Enjoy your music with comfortable wireless headphones featuring a modern design and immersive sound."
+        description:
+            "Enjoy your music with comfortable wireless headphones featuring a modern design and immersive sound."
     },
 
     "Premium Coffee Mug": {
         category: "Home",
         price: 14.99,
         image: "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=800&q=80",
-        description: "A premium coffee mug with a clean and elegant design. Perfect for coffee, tea and your daily beverages."
+        description:
+            "A premium coffee mug with a clean and elegant design. Perfect for coffee, tea and your daily beverages."
     },
 
     "Leather Bag": {
         category: "Bags",
         price: 79.99,
         image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
-        description: "A stylish leather bag with a practical design. Perfect for carrying your everyday essentials."
+        description:
+            "A stylish leather bag with a practical design. Perfect for carrying your everyday essentials."
     }
-
 };
 
 
-// =========================
-// SHOPPING CART
-// =========================
+// =========================================================
+// CART & WISHLIST
+// =========================================================
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-
-// =========================
-// WISHLIST
-// =========================
-
-let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+let wishlist =
+    JSON.parse(localStorage.getItem("wishlist")) || [];
 
 
-// =========================
+// =========================================================
 // UPDATE CART COUNT
-// =========================
+// =========================================================
 
 function updateCartCount() {
-
     const cartCount = document.getElementById("cart-count");
 
     if (!cartCount) {
         return;
     }
 
-    const totalItems = cart.reduce(function(total, item) {
-
+    const totalItems = cart.reduce(function (total, item) {
         return total + (Number(item.quantity) || 1);
-
     }, 0);
 
     cartCount.textContent = totalItems;
-
 }
 
 
-// =========================
+// =========================================================
 // MOBILE NAVIGATION
-// =========================
+// =========================================================
 
-const menuToggle = document.getElementById("menu-toggle");
-const mainNav = document.querySelector("#header nav");
+const menuToggle =
+    document.getElementById("menu-toggle");
+
+const mainNav =
+    document.querySelector("#header nav");
 
 if (menuToggle && mainNav) {
 
-    menuToggle.addEventListener("click", function() {
+    menuToggle.addEventListener("click", function () {
 
         mainNav.classList.toggle("mobile-open");
 
@@ -107,28 +111,18 @@ if (menuToggle && mainNav) {
             isOpen
         );
 
-        if (isOpen) {
-
-            menuToggle.innerHTML =
-                '<i class="fa-solid fa-xmark"></i>';
-
-        } else {
-
-            menuToggle.innerHTML =
-                '<i class="fa-solid fa-bars"></i>';
-
-        }
-
+        menuToggle.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
     });
 
 
-    // Close mobile menu after clicking a link
+    const navLinks =
+        mainNav.querySelectorAll("a");
 
-    const navLinks = mainNav.querySelectorAll("a");
+    navLinks.forEach(function (link) {
 
-    navLinks.forEach(function(link) {
-
-        link.addEventListener("click", function() {
+        link.addEventListener("click", function () {
 
             mainNav.classList.remove("mobile-open");
 
@@ -139,17 +133,15 @@ if (menuToggle && mainNav) {
 
             menuToggle.innerHTML =
                 '<i class="fa-solid fa-bars"></i>';
-
         });
 
     });
-
 }
 
 
-// =========================
-// ACTIVE NAVBAR LINK
-// =========================
+// =========================================================
+// ACTIVE NAVIGATION
+// =========================================================
 
 function setActiveNavigation() {
 
@@ -161,7 +153,7 @@ function setActiveNavigation() {
     const navLinks =
         document.querySelectorAll("#header nav a");
 
-    navLinks.forEach(function(link) {
+    navLinks.forEach(function (link) {
 
         const href =
             link.getAttribute("href");
@@ -179,6 +171,7 @@ function setActiveNavigation() {
             linkPage = "index.html";
         }
 
+
         // Product page belongs to Shop
         if (
             currentPage === "product.html" &&
@@ -187,7 +180,8 @@ function setActiveNavigation() {
             link.classList.add("active");
         }
 
-        // Cart and checkout belong to Cart
+
+        // Cart + Checkout belong to Cart
         else if (
             (
                 currentPage === "cart.html" ||
@@ -198,30 +192,27 @@ function setActiveNavigation() {
             link.classList.add("active");
         }
 
-        else if (
-            currentPage === linkPage
-        ) {
+
+        // Normal pages
+        else if (currentPage === linkPage) {
             link.classList.add("active");
         }
 
     });
-
 }
 
 setActiveNavigation();
 
 
-// =========================
-// ADD TO CART FUNCTION
-// =========================
+// =========================================================
+// ADD PRODUCT TO CART
+// =========================================================
 
 function addProductToCart(name, price) {
 
     const existingItem =
-        cart.find(function(item) {
-
+        cart.find(function (item) {
             return item.name === name;
-
         });
 
 
@@ -233,13 +224,9 @@ function addProductToCart(name, price) {
     } else {
 
         cart.push({
-
             name: name,
-
             price: Number(price),
-
             quantity: 1
-
         });
 
     }
@@ -250,23 +237,20 @@ function addProductToCart(name, price) {
         JSON.stringify(cart)
     );
 
-
     updateCartCount();
-
 }
 
 
-// =========================
+// =========================================================
 // ADD TO CART BUTTONS
-// =========================
+// =========================================================
 
 const addCartButtons =
     document.querySelectorAll(".add-cart");
 
+addCartButtons.forEach(function (button) {
 
-addCartButtons.forEach(function(button) {
-
-    button.addEventListener("click", function() {
+    button.addEventListener("click", function () {
 
         const name =
             button.getAttribute("data-name");
@@ -276,9 +260,7 @@ addCartButtons.forEach(function(button) {
                 button.getAttribute("data-price")
             );
 
-
         addProductToCart(name, price);
-
 
         alert(
             name + " added to cart!"
@@ -289,11 +271,14 @@ addCartButtons.forEach(function(button) {
 });
 
 
-// =========================
-// WISHLIST BUTTONS
-// =========================
+// =========================================================
+// WISHLIST
+// =========================================================
 
-function updateWishlistButton(button, productName) {
+function updateWishlistButton(
+    button,
+    productName
+) {
 
     if (wishlist.includes(productName)) {
 
@@ -308,9 +293,7 @@ function updateWishlistButton(button, productName) {
 
         button.innerHTML =
             '<i class="fa-regular fa-heart"></i>';
-
     }
-
 }
 
 
@@ -327,7 +310,6 @@ function toggleWishlist(productName) {
     } else {
 
         wishlist.push(productName);
-
     }
 
 
@@ -335,7 +317,6 @@ function toggleWishlist(productName) {
         "wishlist",
         JSON.stringify(wishlist)
     );
-
 }
 
 
@@ -343,11 +324,10 @@ const wishlistButtons =
     document.querySelectorAll(".wishlist-btn");
 
 
-wishlistButtons.forEach(function(button) {
+wishlistButtons.forEach(function (button) {
 
     const productName =
         button.getAttribute("data-name");
-
 
     updateWishlistButton(
         button,
@@ -357,7 +337,7 @@ wishlistButtons.forEach(function(button) {
 
     button.addEventListener(
         "click",
-        function() {
+        function () {
 
             toggleWishlist(productName);
 
@@ -372,9 +352,9 @@ wishlistButtons.forEach(function(button) {
 });
 
 
-// =========================
+// =========================================================
 // SHOP SEARCH / FILTER / SORT
-// =========================
+// =========================================================
 
 const productSearch =
     document.getElementById("product-search");
@@ -384,6 +364,9 @@ const categoryFilter =
 
 const sortProducts =
     document.getElementById("sort-products");
+
+const noProducts =
+    document.getElementById("no-products");
 
 
 if (
@@ -398,9 +381,7 @@ if (
 
     const productCards =
         Array.from(
-            document.querySelectorAll(
-                ".product-card"
-            )
+            document.querySelectorAll(".product-card")
         );
 
 
@@ -411,17 +392,14 @@ if (
                 ".price, .product-price"
             );
 
-
         if (!priceElement) {
             return 0;
         }
-
 
         return Number(
             priceElement.textContent
                 .replace(/[^0-9.]/g, "")
         );
-
     }
 
 
@@ -442,7 +420,7 @@ if (
 
 
         let filteredProducts =
-            productCards.filter(function(card) {
+            productCards.filter(function (card) {
 
                 const nameElement =
                     card.querySelector(
@@ -466,40 +444,29 @@ if (
 
                 const productCategory =
                     categoryElement
-                        ? categoryElement.textContent
-                            .trim()
+                        ? categoryElement.textContent.trim()
                         : "";
 
 
                 return (
-
-                    productName.includes(
-                        searchText
-                    )
-
-                    &&
-
+                    productName.includes(searchText) &&
                     (
                         selectedCategory === "all" ||
-
-                        productCategory ===
-                        selectedCategory
+                        productCategory === selectedCategory
                     )
-
                 );
 
             });
 
 
-        // Sort
+        // SORT PRODUCTS
 
-        filteredProducts.sort(function(a, b) {
+        filteredProducts.sort(function (a, b) {
 
             const nameA =
                 a.querySelector(
                     "h3, .product-name"
-                )
-                    ?.textContent
+                )?.textContent
                     .trim()
                     .toLowerCase() || "";
 
@@ -507,8 +474,7 @@ if (
             const nameB =
                 b.querySelector(
                     "h3, .product-name"
-                )
-                    ?.textContent
+                )?.textContent
                     .trim()
                     .toLowerCase() || "";
 
@@ -516,66 +482,65 @@ if (
             const priceA =
                 getProductPrice(a);
 
-
             const priceB =
                 getProductPrice(b);
 
 
             if (sortValue === "price-low") {
-
                 return priceA - priceB;
-
             }
 
 
             if (sortValue === "price-high") {
-
                 return priceB - priceA;
-
             }
 
 
             if (sortValue === "name-az") {
-
                 return nameA.localeCompare(nameB);
-
             }
 
 
             if (sortValue === "name-za") {
-
                 return nameB.localeCompare(nameA);
-
             }
 
 
             return 0;
-
         });
 
 
-        // Hide all cards
+        // HIDE ALL PRODUCTS
 
-        productCards.forEach(function(card) {
-
+        productCards.forEach(function (card) {
             card.style.display = "none";
-
         });
 
 
-        // Show filtered cards
+        // SHOW FILTERED PRODUCTS
 
-        filteredProducts.forEach(function(card) {
+        filteredProducts.forEach(function (card) {
 
             card.style.display = "block";
 
             if (productsGrid) {
-
                 productsGrid.appendChild(card);
-
             }
 
         });
+
+
+        // NO PRODUCTS MESSAGE
+
+        if (noProducts) {
+
+            if (filteredProducts.length === 0) {
+                noProducts.style.display = "block";
+            } else {
+                noProducts.style.display = "none";
+            }
+
+        }
 
     }
 
@@ -600,9 +565,9 @@ if (
 }
 
 
-// =========================
+// =========================================================
 // PRODUCT DETAILS PAGE
-// =========================
+// =========================================================
 
 const productDetails =
     document.getElementById(
@@ -634,7 +599,7 @@ if (productDetails) {
 
         productDetails.innerHTML = `
 
-            <div class="product-details-image">
+            <div class="product-detail-image">
 
                 <img
                     src="${product.image}"
@@ -644,44 +609,50 @@ if (productDetails) {
             </div>
 
 
-            <div class="product-details-info">
+            <div class="product-detail-info">
 
-                <span class="details-category">
+                <span class="category">
                     ${product.category}
                 </span>
+
 
                 <h1>
                     ${productName}
                 </h1>
 
-                <div class="details-rating">
+
+                <div class="rating">
                     ★★★★★
                 </div>
 
-                <div class="details-price">
+
+                <div class="price">
                     $${product.price.toFixed(2)}
                 </div>
 
-                <p class="product-description">
+
+                <p>
                     ${product.description}
                 </p>
 
-                <div class="details-actions">
+
+                <div class="detail-actions">
 
                     <button
-                        class="details-cart-btn"
+                        class="btn btn-primary"
                         id="details-add-cart"
                     >
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        Add to Cart
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        &nbsp; Add to Cart
                     </button>
 
+
                     <button
-                        class="details-wishlist-btn ${
+                        class="wishlist-btn ${
                             isWishlisted ? "active" : ""
                         }"
                         id="details-wishlist"
-                        aria-label="Add to wishlist"
+                        aria-label="Wishlist"
                     >
 
                         <i class="${
@@ -709,7 +680,7 @@ if (productDetails) {
 
             detailsAddCart.addEventListener(
                 "click",
-                function() {
+                function () {
 
                     addProductToCart(
                         productName,
@@ -738,7 +709,7 @@ if (productDetails) {
 
             detailsWishlist.addEventListener(
                 "click",
-                function() {
+                function () {
 
                     toggleWishlist(
                         productName
@@ -771,7 +742,7 @@ if (productDetails) {
 
         productDetails.innerHTML = `
 
-            <div class="empty-cart">
+            <div class="empty-state">
 
                 <h2>
                     Product Not Found
@@ -781,9 +752,11 @@ if (productDetails) {
                     The requested product does not exist.
                 </p>
 
+                <br>
+
                 <a
                     href="shop.html"
-                    class="btn"
+                    class="btn btn-primary"
                 >
                     Back to Shop
                 </a>
@@ -791,15 +764,14 @@ if (productDetails) {
             </div>
 
         `;
-
     }
 
 }
 
 
-// =========================
+// =========================================================
 // CART PAGE
-// =========================
+// =========================================================
 
 const cartContainer =
     document.getElementById(
@@ -818,12 +790,12 @@ if (cartContainer) {
 
             cartContainer.innerHTML = `
 
-                <div class="empty-cart">
+                <div class="empty-state">
 
                     <i class="fa-solid fa-cart-shopping"></i>
 
                     <h2>
-                        Your cart is empty
+                        Your Cart is Empty
                     </h2>
 
                     <p>
@@ -832,7 +804,7 @@ if (cartContainer) {
 
                     <a
                         href="shop.html"
-                        class="btn"
+                        class="btn btn-primary"
                     >
                         Continue Shopping
                     </a>
@@ -845,11 +817,10 @@ if (cartContainer) {
             updateCartTotals();
 
             return;
-
         }
 
 
-        cart.forEach(function(item, index) {
+        cart.forEach(function (item, index) {
 
             const quantity =
                 Number(item.quantity) || 1;
@@ -876,7 +847,7 @@ if (cartContainer) {
                     </h3>
 
                     <p>
-                        $${Number(item.price).toFixed(2)} each
+                        $${Number(item.price).toFixed(2)}
                     </p>
 
                 </div>
@@ -888,12 +859,14 @@ if (cartContainer) {
                         class="quantity-btn decrease"
                         data-index="${index}"
                     >
-                        -
+                        −
                     </button>
 
-                    <span class="quantity-value">
+
+                    <span>
                         ${quantity}
                     </span>
+
 
                     <button
                         class="quantity-btn increase"
@@ -913,7 +886,7 @@ if (cartContainer) {
 
 
                 <button
-                    class="remove-cart"
+                    class="cart-remove"
                     data-index="${index}"
                     aria-label="Remove item"
                 >
@@ -932,7 +905,7 @@ if (cartContainer) {
         });
 
 
-        // Increase quantity
+        // INCREASE QUANTITY
 
         const increaseButtons =
             document.querySelectorAll(
@@ -940,11 +913,11 @@ if (cartContainer) {
             );
 
 
-        increaseButtons.forEach(function(button) {
+        increaseButtons.forEach(function (button) {
 
             button.addEventListener(
                 "click",
-                function() {
+                function () {
 
                     const index =
                         Number(
@@ -966,7 +939,7 @@ if (cartContainer) {
         });
 
 
-        // Decrease quantity
+        // DECREASE QUANTITY
 
         const decreaseButtons =
             document.querySelectorAll(
@@ -974,11 +947,11 @@ if (cartContainer) {
             );
 
 
-        decreaseButtons.forEach(function(button) {
+        decreaseButtons.forEach(function (button) {
 
             button.addEventListener(
                 "click",
-                function() {
+                function () {
 
                     const index =
                         Number(
@@ -1017,19 +990,19 @@ if (cartContainer) {
         });
 
 
-        // Remove item
+        // REMOVE PRODUCT
 
         const removeButtons =
             document.querySelectorAll(
-                ".remove-cart"
+                ".cart-remove"
             );
 
 
-        removeButtons.forEach(function(button) {
+        removeButtons.forEach(function (button) {
 
             button.addEventListener(
                 "click",
-                function() {
+                function () {
 
                     const index =
                         Number(
@@ -1076,7 +1049,7 @@ if (cartContainer) {
     function updateCartTotals() {
 
         const subtotal =
-            cart.reduce(function(total, item) {
+            cart.reduce(function (total, item) {
 
                 return total +
                     (
@@ -1149,7 +1122,7 @@ if (cartContainer) {
 
         checkoutLink.addEventListener(
             "click",
-            function(event) {
+            function (event) {
 
                 if (cart.length === 0) {
 
@@ -1172,9 +1145,9 @@ if (cartContainer) {
 }
 
 
-// =========================
+// =========================================================
 // CHECKOUT PAGE
-// =========================
+// =========================================================
 
 const checkoutItems =
     document.getElementById(
@@ -1191,15 +1164,15 @@ if (checkoutItems) {
 
         if (cart.length === 0) {
 
-            checkoutItems.innerHTML =
-                "<p>Your cart is empty.</p>";
+            checkoutItems.innerHTML = `
+                <p>Your cart is empty.</p>
+            `;
 
             return;
-
         }
 
 
-        cart.forEach(function(item) {
+        cart.forEach(function (item) {
 
             const quantity =
                 Number(item.quantity) || 1;
@@ -1238,7 +1211,7 @@ if (checkoutItems) {
 
 
         const subtotal =
-            cart.reduce(function(total, item) {
+            cart.reduce(function (total, item) {
 
                 return total +
                     (
@@ -1300,7 +1273,7 @@ if (checkoutItems) {
 
         checkoutForm.addEventListener(
             "submit",
-            function(event) {
+            function (event) {
 
                 event.preventDefault();
 
@@ -1312,7 +1285,6 @@ if (checkoutItems) {
                     );
 
                     return;
-
                 }
 
 
@@ -1344,9 +1316,9 @@ if (checkoutItems) {
 }
 
 
-// =========================
+// =========================================================
 // CONTACT FORM
-// =========================
+// =========================================================
 
 const contactForm =
     document.getElementById(
@@ -1358,7 +1330,7 @@ if (contactForm) {
 
     contactForm.addEventListener(
         "submit",
-        function(event) {
+        function (event) {
 
             event.preventDefault();
 
@@ -1376,9 +1348,9 @@ if (contactForm) {
 }
 
 
-// =========================
+// =========================================================
 // NEWSLETTER
-// =========================
+// =========================================================
 
 const newsletterForm =
     document.getElementById(
@@ -1390,7 +1362,7 @@ if (newsletterForm) {
 
     newsletterForm.addEventListener(
         "submit",
-        function(event) {
+        function (event) {
 
             event.preventDefault();
 
@@ -1408,8 +1380,8 @@ if (newsletterForm) {
 }
 
 
-// =========================
+// =========================================================
 // INITIALIZE
-// =========================
+// =========================================================
 
 updateCartCount();
