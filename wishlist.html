@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Wishlist - ShopEase</title>
+    <title>Wishlist - NovaShop</title>
 
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -26,529 +20,163 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
-
-    <style>
-
-        .wishlist-page {
-            padding: 70px 0;
-            min-height: 70vh;
-        }
-
-        .wishlist-heading {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .wishlist-heading h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
-
-        .wishlist-heading p {
-            color: #aaa;
-        }
-
-        .wishlist-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .wishlist-card {
-            background: #171a20;
-            border: 1px solid #2a2e36;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: 0.3s;
-        }
-
-        .wishlist-card:hover {
-            transform: translateY(-5px);
-            border-color: #00c9a7;
-        }
-
-        .wishlist-card img {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .wishlist-card-content {
-            padding: 20px;
-        }
-
-        .wishlist-card-content h3 {
-            margin-bottom: 8px;
-        }
-
-        .wishlist-category {
-            color: #00c9a7;
-            font-size: 14px;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .wishlist-price {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 18px;
-        }
-
-        .wishlist-actions {
-            display: flex;
-            gap: 10px;
-        }
-
-        .wishlist-add-cart {
-            flex: 1;
-            padding: 12px;
-            border: none;
-            border-radius: 7px;
-            background: #00c9a7;
-            color: #111;
-            font-family: inherit;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        .wishlist-remove {
-            width: 45px;
-            border: 1px solid #2a2e36;
-            border-radius: 7px;
-            background: #0f1115;
-            color: #ff4d6d;
-            cursor: pointer;
-        }
-
-        .wishlist-remove:hover {
-            border-color: #ff4d6d;
-        }
-
-        .wishlist-empty {
-            text-align: center;
-            padding: 70px 20px;
-            background: #171a20;
-            border: 1px solid #2a2e36;
-            border-radius: 12px;
-        }
-
-        .wishlist-empty i {
-            font-size: 55px;
-            color: #ff4d6d;
-            margin-bottom: 20px;
-        }
-
-        .wishlist-empty h2 {
-            margin-bottom: 10px;
-        }
-
-        .wishlist-empty p {
-            color: #aaa;
-            margin-bottom: 25px;
-        }
-
-        .wishlist-empty a {
-            display: inline-block;
-            padding: 12px 22px;
-            border-radius: 8px;
-            background: #00c9a7;
-            color: #111;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        @media (max-width: 900px) {
-            .wishlist-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 600px) {
-            .wishlist-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-    </style>
-
 </head>
 
 <body>
 
+    <!-- Header -->
+    <header id="header">
+        <div class="nav">
 
-<header class="header">
+            <a href="index.html" class="logo">NovaShop</a>
 
-    <div class="container nav">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
 
-        <a href="index.html" class="logo">
-            Shop<span>Ease</span>
-        </a>
+            <div class="nav-actions">
 
-        <nav>
+                <a
+                    href="wishlist.html"
+                    class="nav-icon"
+                    title="Wishlist"
+                >
+                    <i class="fa-solid fa-heart"></i>
+                </a>
 
-            <a href="index.html">Home</a>
+                <a
+                    href="cart.html"
+                    class="cart-link"
+                    title="Shopping Cart"
+                >
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-count">0</span>
+                </a>
 
-            <a href="shop.html">Shop</a>
+                <button
+                    class="menu-toggle"
+                    id="menu-toggle"
+                    type="button"
+                    aria-label="Open Menu"
+                    aria-expanded="false"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
 
-            <a href="about.html">About</a>
-
-            <a href="blog.html">Blog</a>
-
-            <a href="contact.html">Contact</a>
-
-        </nav>
-
-        <a href="cart.html" class="cart-link">
-
-            <i class="fa-solid fa-cart-shopping"></i>
-
-            <span id="cart-count">0</span>
-
-        </a>
-
-    </div>
-
-</header>
-
-
-<main class="wishlist-page">
-
-    <div class="container">
-
-        <div class="wishlist-heading">
-
-            <h1>
-                My Wishlist
-            </h1>
-
-            <p>
-                Products you've saved for later.
-            </p>
+            </div>
 
         </div>
+    </header>
 
 
-        <div
-            class="wishlist-grid"
-            id="wishlist-container"
-        ></div>
+    <!-- Wishlist -->
+    <main>
 
-    </div>
+        <section class="wishlist-page">
 
-</main>
+            <div class="section-heading">
 
+                <p class="section-subtitle">
+                    SAVED FOR LATER
+                </p>
 
-<footer class="footer">
+                <h1>My Wishlist</h1>
 
-    <div class="container">
+                <p>
+                    Keep your favorite products here and
+                    add them to your cart whenever you're ready.
+                </p>
 
-        <p>
-            © 2026 ShopEase. All Rights Reserved.
-        </p>
-
-    </div>
-
-</footer>
+            </div>
 
 
-<script src="js/script.js"></script>
+            <div
+                id="wishlist-container"
+                class="wishlist-grid"
+            >
+                <!-- Wishlist products will be loaded by JavaScript -->
+            </div>
+
+        </section>
+
+    </main>
 
 
-<script>
+    <!-- Footer -->
+    <footer>
 
-    const wishlistContainer =
-        document.getElementById(
-            "wishlist-container"
-        );
+        <div class="footer-container">
 
+            <div class="footer-box">
 
-    let savedWishlist =
-        JSON.parse(
-            localStorage.getItem("wishlist")
-        ) || [];
+                <h2>NovaShop</h2>
 
+                <p>
+                    Discover quality products, modern style
+                    and a seamless shopping experience.
+                </p>
 
-    let savedCart =
-        JSON.parse(
-            localStorage.getItem("cart")
-        ) || [];
+                <div class="social-icons">
 
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
 
-    const wishlistProducts = {
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
 
-        "Classic Watch": {
-            category: "Accessories",
-            price: 49.99,
-            image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=800&q=80"
-        },
-
-        "Fashion T-Shirt": {
-            category: "Clothing",
-            price: 24.99,
-            image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80"
-        },
-
-        "Running Shoes": {
-            category: "Footwear",
-            price: 69.99,
-            image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80"
-        },
-
-        "Wireless Headphones": {
-            category: "Electronics",
-            price: 89.99,
-            image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
-        },
-
-        "Premium Coffee Mug": {
-            category: "Home",
-            price: 14.99,
-            image: "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=800&q=80"
-        },
-
-        "Leather Bag": {
-            category: "Bags",
-            price: 79.99,
-            image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"
-        }
-
-    };
-
-
-    function renderWishlist() {
-
-        wishlistContainer.innerHTML = "";
-
-
-        if (savedWishlist.length === 0) {
-
-            wishlistContainer.innerHTML = `
-
-                <div class="wishlist-empty">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                    <h2>
-                        Your Wishlist is Empty
-                    </h2>
-
-                    <p>
-                        Save products you love and find them here.
-                    </p>
-
-                    <a href="shop.html">
-                        Explore Products
+                    <a href="#" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
                     </a>
 
                 </div>
 
-            `;
+            </div>
 
-            return;
 
-        }
+            <div class="footer-box">
 
+                <h3>Quick Links</h3>
 
-        savedWishlist.forEach(
-            function(productName) {
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
 
-                const product =
-                    wishlistProducts[
-                        productName
-                    ];
+            </div>
 
 
-                if (!product) {
-                    return;
-                }
+            <div class="footer-box">
 
+                <h3>Customer Care</h3>
 
-                const card =
-                    document.createElement(
-                        "div"
-                    );
+                <a href="contact.html">Contact Us</a>
+                <a href="cart.html">Shopping Cart</a>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="checkout.html">Checkout</a>
 
+            </div>
 
-                card.className =
-                    "wishlist-card";
+        </div>
 
 
-                card.innerHTML = `
+        <div class="footer-bottom">
 
-                    <img
-                        src="${product.image}"
-                        alt="${productName}"
-                    >
+            <p>
+                © 2026 NovaShop. All Rights Reserved.
+            </p>
 
-                    <div class="wishlist-card-content">
+        </div>
 
-                        <span class="wishlist-category">
-                            ${product.category}
-                        </span>
+    </footer>
 
-                        <h3>
-                            ${productName}
-                        </h3>
 
-                        <div class="wishlist-price">
-                            $${product.price.toFixed(2)}
-                        </div>
-
-                        <div class="wishlist-actions">
-
-                            <button
-                                class="wishlist-add-cart"
-                                data-name="${productName}"
-                            >
-                                Add to Cart
-                            </button>
-
-                            <button
-                                class="wishlist-remove"
-                                data-name="${productName}"
-                                title="Remove"
-                            >
-                                <i class="fa-solid fa-trash"></i>
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                `;
-
-
-                wishlistContainer.appendChild(
-                    card
-                );
-
-            }
-        );
-
-
-        // ADD TO CART
-
-        document
-            .querySelectorAll(
-                ".wishlist-add-cart"
-            )
-            .forEach(
-                function(button) {
-
-                    button.addEventListener(
-                        "click",
-                        function() {
-
-                            const name =
-                                button.getAttribute(
-                                    "data-name"
-                                );
-
-
-                            const product =
-                                wishlistProducts[
-                                    name
-                                ];
-
-
-                            const existing =
-                                savedCart.find(
-                                    function(item) {
-                                        return item.name === name;
-                                    }
-                                );
-
-
-                            if (existing) {
-
-                                existing.quantity =
-                                    (existing.quantity || 1) + 1;
-
-                            } else {
-
-                                savedCart.push({
-
-                                    name: name,
-
-                                    price: product.price,
-
-                                    quantity: 1
-
-                                });
-
-                            }
-
-
-                            localStorage.setItem(
-                                "cart",
-                                JSON.stringify(
-                                    savedCart
-                                )
-                            );
-
-
-                            alert(
-                                name +
-                                " added to cart!"
-                            );
-
-                        }
-                    );
-
-                }
-            );
-
-
-        // REMOVE FROM WISHLIST
-
-        document
-            .querySelectorAll(
-                ".wishlist-remove"
-            )
-            .forEach(
-                function(button) {
-
-                    button.addEventListener(
-                        "click",
-                        function() {
-
-                            const name =
-                                button.getAttribute(
-                                    "data-name"
-                                );
-
-
-                            savedWishlist =
-                                savedWishlist.filter(
-                                    function(item) {
-                                        return item !== name;
-                                    }
-                                );
-
-
-                            localStorage.setItem(
-                                "wishlist",
-                                JSON.stringify(
-                                    savedWishlist
-                                )
-                            );
-
-
-                            renderWishlist();
-
-                        }
-                    );
-
-                }
-            );
-
-    }
-
-
-    renderWishlist();
-
-</script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>
