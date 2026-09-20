@@ -1,1 +1,571 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout - NovaShop</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="nav">
+
+            <a href="index.html" class="logo">NovaShop</a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+
+                <a
+                    href="wishlist.html"
+                    class="nav-icon"
+                    title="Wishlist"
+                >
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+
+                <a
+                    href="cart.html"
+                    class="cart-link"
+                    title="Shopping Cart"
+                >
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-count">0</span>
+                </a>
+
+                <button
+                    class="menu-toggle"
+                    id="menu-toggle"
+                    type="button"
+                    aria-label="Open Menu"
+                    aria-expanded="false"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- Checkout -->
+    <main>
+
+        <section class="checkout-page">
+
+            <div class="section-heading">
+
+                <p class="section-subtitle">SECURE CHECKOUT</p>
+
+                <h1>Checkout</h1>
+
+                <p>
+                    Complete your details to place your order.
+                </p>
+
+            </div>
+
+
+            <div class="checkout-layout">
+
+                <!-- Customer Information -->
+                <div class="checkout-form-container">
+
+                    <div class="checkout-card">
+
+                        <div class="checkout-card-title">
+
+                            <span class="checkout-number">01</span>
+
+                            <div>
+                                <h2>Contact Information</h2>
+                                <p>
+                                    Enter your contact details
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <form id="checkout-form">
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label for="first-name">
+                                        First Name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="first-name"
+                                        name="firstName"
+                                        placeholder="Enter your first name"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="last-name">
+                                        Last Name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="last-name"
+                                        name="lastName"
+                                        placeholder="Enter your last name"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="you@example.com"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Phone Number
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="+91 XXXXX XXXXX"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="checkout-card-title address-title">
+
+                                <span class="checkout-number">02</span>
+
+                                <div>
+                                    <h2>Shipping Address</h2>
+                                    <p>
+                                        Where should we deliver your order?
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="address">
+                                    Street Address
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="address"
+                                    name="address"
+                                    placeholder="House no., street, area"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label for="city">
+                                        City
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="city"
+                                        name="city"
+                                        placeholder="Your city"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="state">
+                                        State
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="state"
+                                        name="state"
+                                        placeholder="Your state"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label for="postal-code">
+                                        Postal Code
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="postal-code"
+                                        name="postalCode"
+                                        placeholder="PIN code"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="country">
+                                        Country
+                                    </label>
+
+                                    <select
+                                        id="country"
+                                        name="country"
+                                        required
+                                    >
+                                        <option value="">
+                                            Select Country
+                                        </option>
+
+                                        <option value="India">
+                                            India
+                                        </option>
+
+                                        <option value="USA">
+                                            United States
+                                        </option>
+
+                                        <option value="UK">
+                                            United Kingdom
+                                        </option>
+
+                                        <option value="Canada">
+                                            Canada
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="checkout-card-title address-title">
+
+                                <span class="checkout-number">03</span>
+
+                                <div>
+                                    <h2>Payment Method</h2>
+                                    <p>
+                                        Choose your preferred payment option
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="payment-options">
+
+                                <label class="payment-option">
+
+                                    <input
+                                        type="radio"
+                                        name="payment"
+                                        value="cod"
+                                        checked
+                                    >
+
+                                    <span class="payment-icon">
+                                        <i class="fa-solid fa-money-bill-wave"></i>
+                                    </span>
+
+                                    <span class="payment-content">
+                                        <strong>Cash on Delivery</strong>
+                                        <small>
+                                            Pay when your order arrives
+                                        </small>
+                                    </span>
+
+                                </label>
+
+
+                                <label class="payment-option">
+
+                                    <input
+                                        type="radio"
+                                        name="payment"
+                                        value="card"
+                                    >
+
+                                    <span class="payment-icon">
+                                        <i class="fa-solid fa-credit-card"></i>
+                                    </span>
+
+                                    <span class="payment-content">
+                                        <strong>Card Payment</strong>
+                                        <small>
+                                            Secure online payment
+                                        </small>
+                                    </span>
+
+                                </label>
+
+
+                                <label class="payment-option">
+
+                                    <input
+                                        type="radio"
+                                        name="payment"
+                                        value="upi"
+                                    >
+
+                                    <span class="payment-icon">
+                                        <i class="fa-solid fa-mobile-screen-button"></i>
+                                    </span>
+
+                                    <span class="payment-content">
+                                        <strong>UPI</strong>
+                                        <small>
+                                            Pay using your UPI app
+                                        </small>
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="place-order-btn"
+                            >
+                                Place Order
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Order Summary -->
+                <aside class="checkout-summary">
+
+                    <div class="checkout-summary-card">
+
+                        <h2>Your Order</h2>
+
+
+                        <div
+                            id="checkout-items"
+                            class="checkout-items"
+                        >
+                            <!-- Items loaded by JavaScript -->
+                        </div>
+
+
+                        <div class="summary-divider"></div>
+
+
+                        <div class="summary-row">
+
+                            <span>Subtotal</span>
+
+                            <span id="checkout-subtotal">
+                                $0.00
+                            </span>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>Shipping</span>
+
+                            <span>
+                                Free
+                            </span>
+
+                        </div>
+
+
+                        <div class="summary-divider"></div>
+
+
+                        <div class="summary-row total-row">
+
+                            <span>Total</span>
+
+                            <strong id="checkout-total">
+                                $0.00
+                            </strong>
+
+                        </div>
+
+
+                        <div class="secure-checkout">
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                            <div>
+
+                                <strong>Secure Checkout</strong>
+
+                                <p>
+                                    Your information is protected
+                                    and securely processed.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-box">
+
+                <h2>NovaShop</h2>
+
+                <p>
+                    Discover quality products, modern style
+                    and a seamless shopping experience.
+                </p>
+
+                <div class="social-icons">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-box">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+
+            </div>
+
+
+            <div class="footer-box">
+
+                <h3>Customer Care</h3>
+
+                <a href="contact.html">Contact Us</a>
+                <a href="cart.html">Shopping Cart</a>
+                <a href="wishlist.html">Wishlist</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 NovaShop. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
