@@ -10,13 +10,6 @@ NovaShop provides a clean shopping experience with product browsing, search and 
 
 🔗 **[View Live Website](https://suraj-mahato9955.github.io/E-Commerce-Website/)**
 
----
-
-## 📸 Project Preview
-
-> Screenshots will be added soon.
-
----
 
 ## ✨ Features
 
